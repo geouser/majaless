@@ -1,0 +1,30 @@
+
+// TYPOGRAPHIC
+// ---------------------------
+html,
+body {
+	height: 100%;
+    background-color: #231F20;
+}
+#fullpage {
+    position: relative;
+    z-index: 1;
+}
+canvas {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+#canvas-img {
+    display: none;
+}
+
+// lAYOUT
+// ---------------------------
+.wrapper {
+	width: 83.333%;
+	margin: 0 auto;
+	text-align: center;
+}
+

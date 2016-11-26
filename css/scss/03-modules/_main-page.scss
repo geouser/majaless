@@ -1,0 +1,103 @@
+.main-screen {
+    small {
+        font-family: $gl;
+        color: $gold;
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+    }
+
+    h1 {
+        font-family: $pfb;
+        color: #fff;
+        font-size: 72px;
+        margin-bottom: 20px;
+    }
+
+    .wrapper {
+        position: relative;
+    }
+
+    .section-bg {
+        width: 83.333%;
+        height: 70.4%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+.fullpage-section {
+    -webkit-transition: opacity 1s ease;
+    -o-transition: opacity 1s ease;
+    transition: opacity 1s ease;
+    opacity: 0;
+    position: relative;
+
+    &.active {
+        opacity: 1;
+    }
+}
+
+
+.slice-images {
+    overflow: hidden;
+    .img-slice {
+        display: block;
+        height: 50%;
+        position: relative;
+        overflow: hidden;
+        -webkit-transition: all .7s ease;
+        -o-transition: all .7s ease;
+        transition: all .7s ease;
+        opacity: .5;
+
+        .bg {
+            width: 100%;
+            height: 200%;
+            position: absolute;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+        }
+
+        &.first-img-slice {
+            -webkit-transform: translateX(-100%);
+            -ms-transform: translateX(-100%);
+            -o-transform: translateX(-100%);
+            transform: translateX(-100%);
+            .bg {
+                top: 0;
+            }
+        }
+
+        &.second-img-slice {
+            -webkit-transform: translateX(100%);
+            -ms-transform: translateX(100%);
+            -o-transform: translateX(100%);
+            transform: translateX(100%);
+            .bg {
+                bottom: 0;
+            }
+        }
+    }
+}
+
+
+.fullpage-section.fp-completely {
+    .slice-images .img-slice {
+        &.first-img-slice,
+        &.second-img-slice {
+            -webkit-transform: translateX(0);
+            -ms-transform: translateX(0);
+            -o-transform: translateX(0);
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}

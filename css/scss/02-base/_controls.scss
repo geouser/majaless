@@ -1,0 +1,28 @@
+.button {
+    display: inline-block;
+    padding: 0 40px;
+    height: 55px;
+    border-width: 2px;
+    border-style: solid;
+    line-height: 51px;
+    font-size: 16px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-family: $gb;
+    background-color: transparent;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &--white {
+        border-color: #fff;
+        color: #fff;
+
+        &:hover {
+            border-color: $gold;
+            background-color: $gold;
+            color: #000;
+        }
+    }
+}

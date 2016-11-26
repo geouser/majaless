@@ -1,0 +1,21 @@
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+
+    .site-logo {
+        position: fixed;
+        left: 50%;
+        top: 7.5%;
+        width: 7%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}

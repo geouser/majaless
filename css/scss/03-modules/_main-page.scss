@@ -52,9 +52,9 @@
         height: 50%;
         position: relative;
         overflow: hidden;
-        -webkit-transition: all .7s ease;
-        -o-transition: all .7s ease;
-        transition: all .7s ease;
+        -webkit-transition: all .7s cubic-bezier(0.53, 0, 0.46, 1.01);
+        -o-transition: all .7s cubic-bezier(0.53, 0, 0.46, 1.01);
+        transition: all .7s cubic-bezier(0.53, 0, 0.46, 1.01);
         opacity: .5;
 
         .bg {

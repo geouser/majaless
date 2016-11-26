@@ -6,7 +6,7 @@ window.params = {
 
 
 jQuery(document).ready(function($) {
-
+    create_canvas();
 
     /*---------------------------
                                   Fullpage
@@ -153,7 +153,7 @@ function create_canvas(){
   var imageCanvasContext = imageCanvas.getContext('2d');
   var lineCanvas = document.createElement('canvas');
   var lineCanvasContext = lineCanvas.getContext('2d');
-  var pointLifetime = 2000;
+  var pointLifetime = 500;
   var points = [];
 
   if (image.complete) {

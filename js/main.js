@@ -26,8 +26,15 @@ jQuery(document).ready(function($) {
 
             //events
             onLeave: function(index, nextIndex, direction){},
-            afterLoad: function(anchorLink, index){},
-            afterRender: function(){},
+            afterLoad: function(anchorLink, index){
+                setTimeout(function () {
+                    $('.slice-images').removeClass('finished');
+                    $('.active .slice-images').addClass('finished');
+                 }, 800);
+            },
+            afterRender: function(){
+        
+            },
             afterResize: function(){},
             afterResponsive: function(isResponsive){},
             afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},

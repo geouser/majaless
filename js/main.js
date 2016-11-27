@@ -10,7 +10,7 @@ jQuery(document).ready(function($) {
 
 
     $('#background_music')[0].play();
-    $('#background_music')[0].volume = .1;
+    $('#background_music')[0].volume = .02;
 
     $('.music-control').on('click', function(event) {
       event.preventDefault();

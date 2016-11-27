@@ -25,14 +25,14 @@ jQuery(document).ready(function($) {
             slideSelector: '.fullpage-slide',
 
             //events
-            onLeave: function(index, nextIndex, direction){},
+            onLeave: function(index, nextIndex, direction){
+            },
             afterLoad: function(anchorLink, index){
+                $('.slice-images').removeClass('finished');
                 setTimeout(function () {
-                    $('.slice-images').removeClass('finished');
                     $('.active .slice-images').addClass('finished');
-                 }, 800);
+                }, 800);
                 $('.active .infoSide h2, .active .infoSide p, .active .infoSide .button, .active .smallImg').addClass('shown');
-
                 $(this).addClass('animated');
             },
             afterRender: function(){

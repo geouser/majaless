@@ -7,6 +7,13 @@ body {
     background-color: #231F20;
     color: #FFF;
 }
+#canvas-bg {
+    opacity: .4;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
 #fullpage {
     position: relative;
     z-index: 1;

@@ -9,8 +9,18 @@ jQuery(document).ready(function($) {
     create_canvas();
 
 
-    //$('#background_music')[0].play();
-    //$('#background_music')[0].volume = .1;
+    $('#background_music')[0].play();
+    $('#background_music')[0].volume = .1;
+
+    $('.music-control').on('click', function(event) {
+      event.preventDefault();
+      $(this).toggleClass('muted');
+      if ($(this).hasClass('muted')) {
+        $('#background_music')[0].pause();
+      } else {
+        $('#background_music')[0].play();
+      }
+    });
 
     /*---------------------------
                                   Fullpage

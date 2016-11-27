@@ -289,9 +289,9 @@
         -ms-transform: translateX(50px);
         -o-transform: translateX(50px);
         transform: translateX(50px);
-        -webkit-transition: all 0.5s ease;
-        -o-transition: all 0.5s ease;
-        transition: all 0.5s ease;
+        -webkit-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        transition: all 1s ease;
         opacity: 0;
         visibility: hidden;
 
@@ -308,10 +308,10 @@
     .section-title {
         text-align: left;
         height: auto;
-        -webkit-transform: translateX(-100px);
-        -ms-transform: translateX(-100px);
-        -o-transform: translateX(-100px);
-        transform: translateX(-100px);
+        -webkit-transform: translateX(-50px);
+        -ms-transform: translateX(-50px);
+        -o-transform: translateX(-50px);
+        transform: translateX(-50px);
         h2 {
             font-family: $pfb;
             font-size: 60px;

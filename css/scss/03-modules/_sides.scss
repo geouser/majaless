@@ -14,7 +14,7 @@
         width: 100%;
         margin: 0;
     }
-    .section-bg {
+    .slice-images  {
         width: -webkit-calc(100% - 70px);
         width: calc(100% - 70px);
         height: 100%;
@@ -27,6 +27,13 @@
         -webkit-perspective: 1000px;
            -moz-perspective: 1000px;
                 perspective: 1000px;
+        @include m1600 {
+            width: -webkit-calc(100% - 30px);
+            width: calc(100% - 30px);
+        }
+        &:hover {
+            overflow: visible;
+        }
     }
 }
 .infoSide {
@@ -36,6 +43,9 @@
     position: relative;
     height: 100%;
     height: 100%;
+    @include m1600 {
+        padding-left: 30px;
+    }
     h2 {
         width: 620px;
         position: relative;
@@ -49,18 +59,32 @@
         span {
             text-align: left;
         }
+        @include m1600 {
+            width: 500px;
+            left: -250px;
+            font-size: 52px;
+            line-height: 57px;
+        }
     }
     p {
         font: 24px/42px $gr;
         color: #AAA;
+        @include m1600 {
+            font-size: 19px;
+            line-height: 33px;
+        }
     }
     .smallImg {
         position: absolute;
         right: 0;
         top: 0;
+        max-width: 38%;
     }
     .button {
         margin-top: 70px;
+        @include m1600 {
+            margin-top: 30px;
+        }
     }
 }
 
@@ -72,7 +96,6 @@
     }
     .imgSide {
         padding-right: 0;
-        padding-left: 70px;
         .section-bg {
             left: auto;
             right: 0;
@@ -85,10 +108,16 @@
             left: auto;
             text-align: right;
             right: -310px;
+            @include m1600 {
+                right: -250px;
+            }
         }
         .smallImg {
             right: auto;
             left: 0;
+        }
+        @include m1600 {
+            padding-right: 30px;
         }
     }
 }

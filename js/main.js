@@ -31,7 +31,7 @@ jQuery(document).ready(function($) {
                     $('.slice-images').removeClass('finished');
                     $('.active .slice-images').addClass('finished');
                  }, 800);
-                $('.active .infoSide h2, .active .infoSide p, .active .infoSide .button').addClass('shown');
+                $('.active .infoSide h2, .active .infoSide p, .active .infoSide .button, .active .smallImg').addClass('shown');
             },
             afterRender: function(){
         

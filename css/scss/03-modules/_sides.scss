@@ -121,9 +121,19 @@
     }
     .smallImg {
         position: absolute;
-        right: 0;
+        right: -100px;
         top: 0;
         max-width: 38%;
+        opacity: 0;
+        -webkit-transition: 1s right .2s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .2s;
+           -moz-transition: 1s right .2s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .2s;
+            -ms-transition: 1s right .2s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .2s;
+             -o-transition: 1s right .2s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .2s;
+                transition: 1s right .2s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .2s;
+        &.shown {
+            right: 0;
+            opacity: 1;
+        }
     }
     .button {
         margin-top: 70px;
@@ -184,7 +194,16 @@
         }
         .smallImg {
             right: auto;
-            left: 0;
+            left: 100px;
+            -webkit-transition: 1s left .2s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .2s;
+               -moz-transition: 1s left .2s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .2s;
+                -ms-transition: 1s left .2s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .2s;
+                 -o-transition: 1s left .2s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .2s;
+                    transition: 1s left .2s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .2s;
+            &.shown {
+                left: 0;
+                opacity: 1;
+            }
         }
         @include m1600 {
             padding-right: 30px;

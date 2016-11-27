@@ -35,12 +35,10 @@ jQuery(document).ready(function($) {
                 }, 800);
                 $('.active .infoSide h2, .active .infoSide p, .active .infoSide .button, .active .smallImg').addClass('shown');
 
-                setTimeout(function(){
-                  section.addClass('animated');
-                  if ( 1!== index ) {
-                    $('.main-screen').removeClass('animated');
-                  }
-                }, 10)               
+                section.addClass('animated');
+                if ( 1!== index ) {
+                  $('.main-screen').removeClass('animated');
+                }              
             },
             afterRender: function(){},
             afterRender: function(){},

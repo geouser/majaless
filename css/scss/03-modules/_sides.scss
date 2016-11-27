@@ -1,6 +1,16 @@
 .tilter__figure > * {
     transform: translateZ(0px); /* Force correct stacking order */
 }
+.tilter {
+    -webkit-perspective: 1000px;
+       -moz-perspective: 1000px;
+            perspective: 1000px;
+}
+.col figure {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
 .imgSide {
     width: 50%;
     height: 100%;
@@ -24,9 +34,6 @@
         -webkit-transform: translate(0%, -50%);
         -ms-transform: translate(0%, -50%);
         transform: translate(0%, -50%);
-        -webkit-perspective: 1000px;
-           -moz-perspective: 1000px;
-                perspective: 1000px;
         @include m1600 {
             width: -webkit-calc(100% - 30px);
             width: calc(100% - 30px);

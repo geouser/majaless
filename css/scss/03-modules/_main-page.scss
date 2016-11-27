@@ -29,7 +29,100 @@
         -o-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
     }
+
+    .scroll-down {
+        position: absolute;
+        bottom: 7.5%;
+        left: 50%;
+        -webkit-transform: translate(-50%, 50%);
+        -ms-transform: translate(-50%, 50%);
+        -o-transform: translate(-50%, 50%);
+        transform: translate(-50%, 50%);
+        background-color: transparent;
+        border: 0;
+        font-family: $gm;
+        font-size: 14px;
+        letter-spacing: 0.1em;
+        color: #fff;
+        text-transform: uppercase;
+        cursor: pointer;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+
+        &:hover {
+            color: $gold;
+        }
+
+        &:after {
+            content: '';
+            top: auto;
+            margin-bottom: 5px;
+            bottom: 100%;
+            z-index: 2;
+            display: block;
+            position: absolute;
+            left: 50%;
+            width: 1px;
+            height: 80px;
+            background: rgba(255, 255, 255, 1);
+            background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 50%);
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 50%);
+            background-size: 100% 200%;
+            background-position: 0 -80px;
+            animation: line-scroll 3s ease-in-out infinite;
+        }
+    }
 }
+
+@-webkit-keyframes line-scroll {
+  0% {
+    background-position: 0 -80px;
+  }
+  80% {
+    background-position: 0 0px;
+  }
+  100% {
+    background-position: 0 80px;
+  }
+}
+@-moz-keyframes line-scroll {
+  0% {
+    background-position: 0 -80px;
+  }
+  80% {
+    background-position: 0 0px;
+  }
+  100% {
+    background-position: 0 80px;
+  }
+}
+@-ms-keyframes line-scroll {
+  0% {
+    background-position: 0 -80px;
+  }
+  80% {
+    background-position: 0 0px;
+  }
+  100% {
+    background-position: 0 80px;
+  }
+}
+@keyframes line-scroll {
+  0% {
+    background-position: 0 -80px;
+  }
+  80% {
+    background-position: 0 0px;
+  }
+  100% {
+    background-position: 0 80px;
+  }
+}
+
+
+
+
 
 
 .fullpage-section {

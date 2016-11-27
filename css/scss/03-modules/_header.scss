@@ -25,7 +25,7 @@
 .open-menu {
     position: fixed;
     left: 4%;
-    top: 8%;
+    top: 7.5%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
@@ -73,8 +73,25 @@
         }
     }
 
+    .label {
+        display: inline-block;
+        vertical-align: middle;
+        font-family: $pfi;
+        color: #fff;
+        font-size: 18px;
+        line-height: 14px;
+        margin-top: -4px;
+        margin-left: 15px;
+        transition: all 0.5s ease;
+    }
+
     &:hover {
+        .label {
+            color: $gold;
+        }
+
         .line {
+            background-color: $gold;
             &-top {
                 left: -20%;
             }
@@ -87,10 +104,14 @@
 
     &.active {
         opacity: .8;
+        .label {
+            color: $gold;
+        }
         .hamburger {
             margin-top: -1px;
         }
         .line {
+            background-color: $gold;
             &-top {
                 left: 0;
                 -webkit-transform: rotate(45deg) matrix(0, 1, -1, 0, 0, 0);
@@ -115,17 +136,6 @@
             }
         }
     }
-
-    .label {
-        display: inline-block;
-        vertical-align: middle;
-        color: #fff;
-        font-family: $pfi;
-        font-size: 18px;
-        line-height: 14px;
-        margin-top: -4px;
-        margin-left: 15px;
-    }
 }
 
 
@@ -142,9 +152,9 @@
     z-index: 5;
     visibility: hidden;
     opacity: 0;
-    -webkit-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
     text-align: center;
 
     &.active {
@@ -226,6 +236,31 @@
                 -o-transform: matrix(1, 0, 0, 1, 0, 0);
                 transform: matrix(1, 0, 0, 1, 0, 0);
             }
+        }
+    }
+}
+
+
+.languages {
+    position: fixed;
+    right: 4%;
+    top: 7.5%;
+    z-index: 2;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    a {
+        color: #fff;
+        font-family: $pfi;
+        font-size: 18px;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+
+        &:hover {
+            color: $gold;
         }
     }
 }

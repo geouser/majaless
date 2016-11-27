@@ -30,8 +30,6 @@ jQuery(document).ready(function($) {
             afterLoad: function(anchorLink, index){
                 var section = $(this);
 
-                $('.slice-images').removeClass('finished');
-
                 setTimeout(function () {
                     $('.active .slice-images').addClass('finished');
                 }, 800);

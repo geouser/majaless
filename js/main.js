@@ -8,6 +8,10 @@ window.params = {
 jQuery(document).ready(function($) {
     create_canvas();
 
+
+    //$('#background_music')[0].play();
+    //$('#background_music')[0].volume = .1;
+
     /*---------------------------
                                   Fullpage
     ---------------------------*/
@@ -52,16 +56,28 @@ jQuery(document).ready(function($) {
     /*---------------------------
                                   MENU TOGGLE
     ---------------------------*/
-    $('.menu-button').on('click', function(event) {
-        event.preventDefault();
-        $(this).toggleClass('active');
-        $(this).siblings('header').toggleClass('active');
-        if ($('header').hasClass('active')) {
-                $('body, html').css('overflow', 'hidden');
-            } else {
-                $('body, html').css('overflow', 'visible');
-            }
+    $('.open-menu').on('click', function(event) {
+      event.preventDefault();
+      $(this).toggleClass('active');
+      $('.menu-container').toggleClass('active');
     });
+
+    var mi = 0;
+    $('.menu-item').each(function(index, el) {
+      $(this).css({
+        '-webkit-transition-delay': mi+'s',
+        '-o-transition-delay': mi+'s',
+        '-moz-transition-delay': mi+'s',
+        'transition-delay': mi+'s'
+      });
+      var link = $(this).find('a');
+      link.attr( 'data-letters', link.text() );
+      mi += 0.1;
+    });
+
+
+
+
 
 
 

@@ -52,9 +52,6 @@
         height: 50%;
         position: relative;
         overflow: hidden;
-        -webkit-transition: all .7s cubic-bezier(0.53, 0, 0.46, 1.01);
-        -o-transition: all .7s cubic-bezier(0.53, 0, 0.46, 1.01);
-        transition: all .7s cubic-bezier(0.53, 0, 0.46, 1.01);
         opacity: .5;
 
         .bg {
@@ -93,6 +90,9 @@
     .slice-images .img-slice {
         &.first-img-slice,
         &.second-img-slice {
+            -webkit-transition: all 1s cubic-bezier(0.53, 0, 0.46, 1.01);
+            -o-transition: all 1s cubic-bezier(0.53, 0, 0.46, 1.01);
+            transition: all 1s cubic-bezier(0.53, 0, 0.46, 1.01);
             -webkit-transform: translateX(0);
             -ms-transform: translateX(0);
             -o-transform: translateX(0);

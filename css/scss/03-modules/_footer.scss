@@ -24,6 +24,10 @@
         text-transform: uppercase;
         font-family: $gm;
     }
+    &__phone,
+    &__email {
+        width: 200px;
+    }
 }
 
 .fp-viewing-news .footer {

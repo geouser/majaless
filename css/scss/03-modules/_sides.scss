@@ -133,11 +133,11 @@
         top: 0;
         max-width: 38%;
         opacity: 0;
-        -webkit-transition: 1s right .6s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .6s;
-           -moz-transition: 1s right .6s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .6s;
-            -ms-transition: 1s right .6s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .6s;
-             -o-transition: 1s right .6s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .6s;
-                transition: 1s right .6s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .6s;
+        -webkit-transition: .8s right .4s cubic-bezier(0, 0, 0.25, 1), opacity 1.5s ease .4s;
+           -moz-transition: .8s right .4s cubic-bezier(0, 0, 0.25, 1), opacity 1.5s ease .4s;
+            -ms-transition: .8s right .4s cubic-bezier(0, 0, 0.25, 1), opacity 1.5s ease .4s;
+             -o-transition: .8s right .4s cubic-bezier(0, 0, 0.25, 1), opacity 1.5s ease .4s;
+                transition: .8s right .4s cubic-bezier(0, 0, 0.25, 1), opacity 1.5s ease .4s;
         &.shown {
             right: 0;
             opacity: 1;
@@ -154,21 +154,24 @@
                 transition: 1s margin .2s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .2s;
         &:before {
             max-width: 0;
-            -webkit-transition: .6s max-width 2s cubic-bezier(0, 0, 0.25, 1), .2s width 0s;
-               -moz-transition: .6s max-width 2s cubic-bezier(0, 0, 0.25, 1), .2s width 0s;
-                -ms-transition: .6s max-width 2s cubic-bezier(0, 0, 0.25, 1), .2s width 0s;
-                 -o-transition: .6s max-width 2s cubic-bezier(0, 0, 0.25, 1), .2s width 0s;
-                    transition: .6s max-width 2s cubic-bezier(0, 0, 0.25, 1), .2s width 0s;
+            -webkit-transition: all .4s, .6s max-width 2s cubic-bezier(0, 0, 0.25, 1), .2s width 0s;
+               -moz-transition: all .4s, .6s max-width 2s cubic-bezier(0, 0, 0.25, 1), .2s width 0s;
+                -ms-transition: all .4s, .6s max-width 2s cubic-bezier(0, 0, 0.25, 1), .2s width 0s;
+                 -o-transition: all .4s, .6s max-width 2s cubic-bezier(0, 0, 0.25, 1), .2s width 0s;
+                    transition: all .4s, .6s max-width 2s cubic-bezier(0, 0, 0.25, 1), .2s width 0s;
         }
         &.shown {
             margin-left: 0;
             opacity: 1;
             &:before {
-                max-width: 43px;
+                max-width: 40px;
             }
         }
         &.shown:hover {
-            padding-right: 43px;
+            padding-right: 45px;
+            &:before {
+                background-color: #000;
+            }
         }
         @include m1600 {
             margin-top: 30px;
@@ -206,11 +209,11 @@
         .smallImg {
             right: auto;
             left: 100px;
-            -webkit-transition: 1s left .6s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .6s;
-               -moz-transition: 1s left .6s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .6s;
-                -ms-transition: 1s left .6s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .6s;
-                 -o-transition: 1s left .6s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .6s;
-                    transition: 1s left .6s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .6s;
+            -webkit-transition: .8s left .4s cubic-bezier(0, 0, 0.25, 1), opacity 1.5s ease .4s;
+               -moz-transition: .8s left .4s cubic-bezier(0, 0, 0.25, 1), opacity 1.5s ease .4s;
+                -ms-transition: .8s left .4s cubic-bezier(0, 0, 0.25, 1), opacity 1.5s ease .4s;
+                 -o-transition: .8s left .4s cubic-bezier(0, 0, 0.25, 1), opacity 1.5s ease .4s;
+                    transition: .8s left .4s cubic-bezier(0, 0, 0.25, 1), opacity 1.5s ease .4s;
             &.shown {
                 left: 0;
                 opacity: 1;

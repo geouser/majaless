@@ -35,9 +35,8 @@ jQuery(document).ready(function($) {
                 }, 800);
                 $('.active .infoSide h2, .active .infoSide p, .active .infoSide .button, .active .smallImg').addClass('shown');
 
-                section.addClass('animated');
                 if ( 1!== index ) {
-                  $('.main-screen').removeClass('animated');
+                  section.addClass('animated');
                 }              
             },
             afterRender: function(){},
@@ -55,6 +54,12 @@ jQuery(document).ready(function($) {
       $.fn.fullpage.moveSectionDown();
     });
 
+
+    $(window).on('load', function(event) {
+      event.preventDefault();
+      $('.main-screen').addClass('animated');
+      $.fn.fullpage.moveTo(1);
+    });
 
 
 

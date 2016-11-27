@@ -28,16 +28,21 @@ jQuery(document).ready(function($) {
             onLeave: function(index, nextIndex, direction){
             },
             afterLoad: function(anchorLink, index){
+                var section = $(this);
+
                 $('.slice-images').removeClass('finished');
+
                 setTimeout(function () {
                     $('.active .slice-images').addClass('finished');
                 }, 800);
                 $('.active .infoSide h2, .active .infoSide p, .active .infoSide .button, .active .smallImg').addClass('shown');
-                $(this).addClass('animated');
+
+                setTimeout(function(){
+                  section.addClass('animated');
+                }, 10)               
             },
-            afterRender: function(){
-        
-            },
+            afterRender: function(){},
+            afterRender: function(){},
             afterResize: function(){},
             afterResponsive: function(isResponsive){},
             afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
@@ -93,8 +98,17 @@ jQuery(document).ready(function($) {
 
 
 
-
-
+    /*---------------------------
+                                  Animation-delay
+    ---------------------------*/
+    $('[data-delay]').each(function(index, el) {
+      $(this).css({
+        '-webkit-transition-delay':$(this).attr('data-delay'),
+        '-o-transition-delay': $(this).attr('data-delay'),
+        '-moz-transition-delay': $(this).attr('data-delay'),
+        'transition-delay': $(this).attr('data-delay')
+      });
+    });
 
 
     /*---------------------------

@@ -1,6 +1,16 @@
 .tilter__figure > * {
     transform: translateZ(0px); /* Force correct stacking order */
 }
+.tilter {
+    -webkit-perspective: 1000px;
+       -moz-perspective: 1000px;
+            perspective: 1000px;
+}
+.col figure {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
 .imgSide {
     width: 50%;
     height: 100%;
@@ -24,9 +34,6 @@
         -webkit-transform: translate(0%, -50%);
         -ms-transform: translate(0%, -50%);
         transform: translate(0%, -50%);
-        -webkit-perspective: 1000px;
-           -moz-perspective: 1000px;
-                perspective: 1000px;
         @include m1600 {
             width: -webkit-calc(100% - 30px);
             width: calc(100% - 30px);
@@ -99,7 +106,7 @@
              -o-transition: 1s margin .2s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .2s;
                 transition: 1s margin .2s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .2s;
         
-         &.shown {
+        &.shown {
             margin-left: 0;
             opacity: 1;
         }
@@ -114,12 +121,44 @@
     }
     .smallImg {
         position: absolute;
-        right: 0;
+        right: -100px;
         top: 0;
         max-width: 38%;
+        opacity: 0;
+        -webkit-transition: 1s right 1s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease 1.2s;
+           -moz-transition: 1s right 1s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease 1.2s;
+            -ms-transition: 1s right 1s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease 1.2s;
+             -o-transition: 1s right 1s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease 1.2s;
+                transition: 1s right 1s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease 1.2s;
+        &.shown {
+            right: 0;
+            opacity: 1;
+        }
     }
     .button {
         margin-top: 70px;
+        margin-left: 100px;
+        opacity: 0;
+        -webkit-transition: 1s margin .2s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .2s;
+           -moz-transition: 1s margin .2s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .2s;
+            -ms-transition: 1s margin .2s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .2s;
+             -o-transition: 1s margin .2s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .2s;
+                transition: 1s margin .2s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .2s;
+        &:before {
+            max-width: 0;
+            -webkit-transition: .6s max-width 2.4s cubic-bezier(0, 0, 0.25, 1);
+               -moz-transition: .6s max-width 2.4s cubic-bezier(0, 0, 0.25, 1);
+                -ms-transition: .6s max-width 2.4s cubic-bezier(0, 0, 0.25, 1);
+                 -o-transition: .6s max-width 2.4s cubic-bezier(0, 0, 0.25, 1);
+                    transition: .6s max-width 2.4s cubic-bezier(0, 0, 0.25, 1);
+        }
+        &.shown {
+            margin-left: 0;
+            opacity: 1;
+            &:before {
+                max-width: 40px;
+            }
+        }
         @include m1600 {
             margin-top: 30px;
         }
@@ -155,7 +194,16 @@
         }
         .smallImg {
             right: auto;
-            left: 0;
+            left: 100px;
+            -webkit-transition: 1s left 1s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease 1.2s;
+           -moz-transition: 1s left 1s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease 1.2s;
+            -ms-transition: 1s left 1s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease 1.2s;
+             -o-transition: 1s left 1s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease 1.2s;
+                transition: 1s left 1s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease 1.2s;
+            &.shown {
+                left: 0;
+                opacity: 1;
+            }
         }
         @include m1600 {
             padding-right: 30px;

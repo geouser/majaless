@@ -151,7 +151,8 @@
         height: 50%;
         position: relative;
         overflow: hidden;
-        opacity: .5;
+        opacity: 0;
+        visibility: hidden;
 
         .bg {
             width: 100%;
@@ -197,6 +198,7 @@
             -o-transform: translateX(0);
             transform: translateX(0);
             opacity: 1;
+            visibility: visible;
         }
     }
 }

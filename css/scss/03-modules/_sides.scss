@@ -36,3 +36,9 @@
         margin-top: 70px;
     }
 }
+
+.fullpage-section--sides {
+    &:nth-of-type(2n) {
+        background-color: peru;
+    }
+}

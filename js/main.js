@@ -32,6 +32,9 @@ jQuery(document).ready(function($) {
                     $('.active .slice-images').addClass('finished');
                  }, 800);
                 $('.active .infoSide h2, .active .infoSide p, .active .infoSide .buttton').addClass('shown');
+
+                console.log(anchorLink);
+                $(this).addClass('animated');
             },
             afterRender: function(){
         

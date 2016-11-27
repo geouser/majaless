@@ -1,10 +1,32 @@
+.tilter__figure > * {
+    transform: translateZ(0px); /* Force correct stacking order */
+}
 .imgSide {
     width: 50%;
-    padding-right: 70px;
     height: 100%;
+    position: relative;
     img {
         max-width: 100%;
         max-height: 100%;
+    }
+    figure {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+    }
+    .section-bg {
+        width: -webkit-calc(100% - 70px);
+        width: calc(100% - 70px);
+        height: 100%;
+        position: absolute;
+        left: 0%;
+        top: 50%;
+        -webkit-transform: translate(0%, -50%);
+        -ms-transform: translate(0%, -50%);
+        transform: translate(0%, -50%);
+        -webkit-perspective: 1000px;
+           -moz-perspective: 1000px;
+                perspective: 1000px;
     }
 }
 .infoSide {
@@ -17,11 +39,16 @@
     h2 {
         width: 620px;
         position: relative;
-        left: -300px;
+        left: -310px;
         font-family: $pfb;
         font-size: 60px;
         line-height: 71px;
         margin-bottom: 60px;
+        text-align: left;
+        pointer-events: none;
+        span {
+            text-align: left;
+        }
     }
     p {
         font: 24px/42px $gr;
@@ -37,8 +64,49 @@
     }
 }
 
-.fullpage-section--sides {
-    &:nth-of-type(2n) {
-        background-color: peru;
+.fullpage-section--infoLeft {
+    .wrapper--flex {
+        -webkit-flex-direction: row-reverse;
+            -ms-flex-direction: row-reverse;
+                flex-direction: row-reverse;
+    }
+    .imgSide {
+        padding-right: 0;
+        padding-left: 70px;
+        .section-bg {
+            left: auto;
+            right: 0;
+        }
+    }
+    .infoSide {
+        padding-left: 0;
+        padding-right: 70px;
+        h2 {
+            left: auto;
+            text-align: right;
+            right: -310px;
+        }
+        .smallImg {
+            right: auto;
+            left: 0;
+        }
     }
 }
+
+.tilter__deco {
+    border: 2px solid $gold;
+    width: 95%;
+    height: 95%;
+    position: absolute;
+    left: 0; right: 0;
+    bottom: 0; top: 0;
+    margin: auto;
+    opacity: 0;
+    @include transition(opacity, .4s)
+}
+.imgSide:hover {
+    .tilter__deco {
+        opacity: .6;
+    }
+}
+

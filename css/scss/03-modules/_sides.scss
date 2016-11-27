@@ -154,17 +154,24 @@
                 transition: 1s margin .2s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .2s;
         &:before {
             max-width: 0;
-            -webkit-transition: .6s max-width 2.4s cubic-bezier(0, 0, 0.25, 1);
-               -moz-transition: .6s max-width 2.4s cubic-bezier(0, 0, 0.25, 1);
-                -ms-transition: .6s max-width 2.4s cubic-bezier(0, 0, 0.25, 1);
-                 -o-transition: .6s max-width 2.4s cubic-bezier(0, 0, 0.25, 1);
-                    transition: .6s max-width 2.4s cubic-bezier(0, 0, 0.25, 1);
+            -webkit-transition: .6s max-width 2.4s cubic-bezier(0, 0, 0.25, 1), .2s width 0s;
+               -moz-transition: .6s max-width 2.4s cubic-bezier(0, 0, 0.25, 1), .2s width 0s;
+                -ms-transition: .6s max-width 2.4s cubic-bezier(0, 0, 0.25, 1), .2s width 0s;
+                 -o-transition: .6s max-width 2.4s cubic-bezier(0, 0, 0.25, 1), .2s width 0s;
+                    transition: .6s max-width 2.4s cubic-bezier(0, 0, 0.25, 1), .2s width 0s;
         }
         &.shown {
             margin-left: 0;
             opacity: 1;
             &:before {
                 max-width: 40px;
+            }
+        }
+        &.shown:hover {
+            padding-right: 40px;
+            &:before {
+                width: 0;
+                max-width: 0;
             }
         }
         @include m1600 {

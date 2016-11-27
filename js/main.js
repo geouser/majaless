@@ -6,7 +6,7 @@ window.params = {
 
 
 jQuery(document).ready(function($) {
-    create_canvas();
+    //create_canvas();
 
 
     //$('#background_music')[0].play();
@@ -34,6 +34,12 @@ jQuery(document).ready(function($) {
             onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
         });
     }
+
+
+    $('.scroll-down').on('click', function(event) {
+      event.preventDefault();
+      $.fn.fullpage.moveSectionDown();
+    });
 
 
 

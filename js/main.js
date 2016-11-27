@@ -17,7 +17,7 @@ jQuery(document).ready(function($) {
     ---------------------------*/
     if ( $('#fullpage').length > 0 ) {
         $('#fullpage').fullpage({
-            anchors:['main-page', 'second-page', 'third-page', 'fourth-page', 'fifth-page'],
+            anchors:['main-page', 'second-page', 'third-page', 'home-textile', 'furniture', 'news'],
             scrollingSpeed: 1000,
 
             //Custom selectors
@@ -55,6 +55,7 @@ jQuery(document).ready(function($) {
       event.preventDefault();
       $.fn.fullpage.moveSectionDown();
     });
+
 
 
 

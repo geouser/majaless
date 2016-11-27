@@ -288,3 +288,111 @@
     }
 
 }
+
+
+
+.news-section {
+    .wrapper {
+        height: auto!important;
+    }
+    h2 {
+        font-family: $pfb;
+        font-size: 60px;
+        margin-bottom: 140px;
+
+        @media (max-width: 1700px) {
+            margin-bottom: 110px;
+        }
+
+        @media (max-width: 1600px) {
+            font-size: 50px;
+        }
+
+        @media (max-width: 1500px) {
+            margin-bottom: 80px;
+        }
+
+        @media (max-width: 1300px) {
+            margin-bottom: 50px;
+        }
+    }
+
+    .news-row {
+        text-align: left;
+        margin: 0 -20px;
+        @include flex();
+
+        .news-item {
+            width: -webkit-calc(25% - 20px);
+            width: calc(25% - 20px);
+            margin: 0 10px;
+            padding-right: 40px;
+            -webkit-transform: translateY(100px);
+            -ms-transform: translateY(100px);
+            -o-transform: translateY(100px);
+            transform: translateY(100px);
+            opacity: 0;
+            visibility: hidden;
+            -webkit-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+
+            &__category {
+                color: $gold;
+                text-transform: uppercase;
+                font-size: 14px;
+                font-family: $gm;
+                margin-bottom: 28px;
+
+
+                @media (max-width: 1500px) {
+                    margin-bottom: 15px;
+                }
+            }
+
+            &__title {
+                font-family: $pfb;
+                font-size: 21px;
+                letter-spacing: 0.025em;
+                line-height: 25px;
+                height: 50px;
+                overflow: hidden;
+                margin-bottom: 20px;
+
+                @media (max-width: 1500px) {
+                    margin-bottom: 15px;
+                }
+            }
+
+            &__preview {
+                line-height: 42px;
+                height: 168px;
+                overflow: hidden;
+                font-family: $gl;
+
+                @media (max-width: 1500px) {
+                    line-height: normal;
+                    height: 88px;
+                }
+
+                p {
+                    color: $grey;
+                    font-size: 18px; 
+                }
+            }
+        }
+
+
+    }
+
+    &.animated {
+        .news-item {
+            -webkit-transform: translateY(0);
+            -ms-transform: translateY(0);
+            -o-transform: translateY(0);
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}

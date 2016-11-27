@@ -9,7 +9,7 @@
     -webkit-transition: all 1s ease;
     -o-transition: all 1s ease;
     transition: all 1s ease;
-    z-index: 3;
+    z-index: 2;
     opacity: 0;
     visibility: hidden;
     bottom: -30px;
@@ -30,4 +30,5 @@
     opacity: 1;
     visibility: visible;
     bottom: 7.5%;
+    z-index: 2;
 }

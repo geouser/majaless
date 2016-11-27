@@ -39,6 +39,9 @@ jQuery(document).ready(function($) {
 
                 setTimeout(function(){
                   section.addClass('animated');
+                  if ( 1!== index ) {
+                    $('.main-screen').removeClass('animated');
+                  }
                 }, 10)               
             },
             afterRender: function(){},

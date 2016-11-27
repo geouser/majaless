@@ -28,6 +28,14 @@
     &__email {
         width: 200px;
     }
+
+    &__phone {
+        text-align: left;
+    }
+
+    &__email {
+        text-align: right;
+    }
 }
 
 .fp-viewing-news .footer {

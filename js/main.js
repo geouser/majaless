@@ -6,7 +6,7 @@ window.params = {
 
 
 jQuery(document).ready(function($) {
-    //create_canvas();
+    create_canvas();
 
 
     //$('#background_music')[0].play();
@@ -35,7 +35,7 @@ jQuery(document).ready(function($) {
                 }, 800);
                 $('.active .infoSide h2, .active .infoSide p, .active .infoSide .button, .active .smallImg').addClass('shown');
 
-                if ( 1!== index ) {
+                if ( 1 !== index ) {
                   section.addClass('animated');
                 }              
             },

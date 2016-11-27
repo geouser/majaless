@@ -17,7 +17,7 @@ jQuery(document).ready(function($) {
     ---------------------------*/
     if ( $('#fullpage').length > 0 ) {
         $('#fullpage').fullpage({
-            anchors:['main-page', 'second-page'],
+            anchors:['main-page', 'second-page', 'third-page', 'fourth-page', 'fifth-page'],
             scrollingSpeed: 1000,
 
             //Custom selectors

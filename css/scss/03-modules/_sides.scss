@@ -56,8 +56,20 @@
         margin-bottom: 60px;
         text-align: left;
         pointer-events: none;
+        margin-left: 100px;
+        opacity: 0;
+        -webkit-transition: 1s margin .2s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .2s;
+           -moz-transition: 1s margin .2s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .2s;
+            -ms-transition: 1s margin .2s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .2s;
+             -o-transition: 1s margin .2s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .2s;
+                transition: 1s margin .2s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .2s;
+
         span {
             text-align: left;
+        }
+        &.shown {
+            margin-left: 0;
+            opacity: 1;
         }
         @include m1600 {
             width: 500px;
@@ -77,6 +89,20 @@
     p {
         font: 24px/42px $gr;
         color: #AAA;
+        margin-left: 100px;
+        opacity: 0;
+        width: 100%;
+        display: block;
+        -webkit-transition: 1s margin .2s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .2s;
+           -moz-transition: 1s margin .2s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .2s;
+            -ms-transition: 1s margin .2s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .2s;
+             -o-transition: 1s margin .2s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .2s;
+                transition: 1s margin .2s cubic-bezier(0, 0, 0.25, 1), opacity 2s ease .2s;
+        
+         &.shown {
+            margin-left: 0;
+            opacity: 1;
+        }
         @include m1600 {
             font-size: 19px;
             line-height: 33px;

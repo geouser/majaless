@@ -283,8 +283,8 @@ function create_canvas(){
 
     lineCanvasContext.clearRect(0, 0, lineCanvas.width, lineCanvas.height);
     lineCanvasContext.lineCap = 'round';
-    lineCanvasContext.shadowBlur = 80;
-    lineCanvasContext.shadowColor = '#000';
+    lineCanvasContext.shadowBlur = 10;
+    lineCanvasContext.shadowColor = '#f5d679';
     
     for (var i = 1; i < points.length; i++) {
       var point = points[i];

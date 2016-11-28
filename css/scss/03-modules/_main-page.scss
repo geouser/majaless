@@ -444,3 +444,66 @@
         }
     }
 }
+
+
+.letter {
+    font-size: 400px;
+    font-family: $gb;
+    color: #231f20;
+    position: absolute;
+    z-index: -1;
+    line-height: 280px;
+
+    @media (max-width: 1600px) {
+        font-size: 300px;
+        line-height: 210px;
+    }
+}
+.second-section {
+    .first-letter {
+        top: 15%;
+        right: 25%;
+    }
+
+    .second-letter {
+        right: 8.3%;
+        bottom: 15%;
+    }
+}
+
+.third-section {
+    .first-letter {
+        top: 15%;
+        left: 25%;
+    }
+
+    .second-letter {
+        left: 8.3%;
+        bottom: 15%;
+    }
+}
+
+.forth-section {
+    .first-letter {
+        top: 15%;
+        left: 10%;
+    }
+}
+
+.fifth-section {
+    .first-letter {
+        bottom: 15%;
+        left: 10%;
+    }
+}
+.news-section {
+    .first-letter {
+        top: 15%;
+        right: 8%;
+    }
+
+    .second-letter {
+        bottom: 15%;
+        left: 8%;
+    }
+}

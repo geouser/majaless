@@ -7,6 +7,11 @@ body {
     background-color: #231F20;
     color: #FFF;
 }
+body {
+    background-image: url(../images/ornament_bg.jpg);
+    background-size: cover;
+    background-position: 0 0;
+}
 #canvas-bg {
     opacity: .4;
     position: fixed;

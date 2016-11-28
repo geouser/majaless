@@ -214,7 +214,7 @@ function create_canvas(){
   var imageCanvasContext = imageCanvas.getContext('2d');
   var lineCanvas = document.createElement('canvas');
   var lineCanvasContext = lineCanvas.getContext('2d');
-  var pointLifetime = 500;
+  var pointLifetime = 400;
   var points = [];
 
   if (image.complete) {
@@ -282,10 +282,12 @@ function create_canvas(){
     var maximumSpeed = 60;
 
     lineCanvasContext.clearRect(0, 0, lineCanvas.width, lineCanvas.height);
-    lineCanvasContext.lineCap = 'round';
-    lineCanvasContext.shadowBlur = 100;
-    lineCanvasContext.shadowColor = '#f5d679';
-    
+    lineCanvasContext.lineJoin = 'round';
+    lineCanvasContext.lineCap = 'round';    
+    lineCanvasContext.shadowBlur = 60;
+    lineCanvasContext.shadowColor = '#000';
+
+  
     for (var i = 1; i < points.length; i++) {
       var point = points[i];
       var previousPoint = points[i - 1];
@@ -335,5 +337,6 @@ function create_canvas(){
     imageCanvasContext.drawImage(image, 0, 0, width, height);
     imageCanvasContext.globalCompositeOperation = 'destination-in';
     imageCanvasContext.drawImage(lineCanvas, 0, 0);
+
   }  
 }

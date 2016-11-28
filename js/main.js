@@ -270,20 +270,42 @@ function create_canvas(){
     requestAnimationFrame(tick);
   }
 
+
+
+var  running = function(i) {
+  var t = 0;
+  points.push({
+    time: Date.now(),
+    x: 2 * i,
+    y: 1 * i
+  });
+};
+
+i = 10;
+
+setInterval(function(){ 
+  setInterval(function(){ 
+    running(i);
+    i+=10;
+  }, 1);
+  points = [];
+  i = 20;
+}, 5000);
+
   /**
    * Draws a line using the recorded cursor positions.
    *
    * This line is used to mask the original image.
    */
   function drawLineCanvas() {
-    var minimumLineWidth = 60;
-    var maximumLineWidth = 60;
+    var minimumLineWidth = 1;
+    var maximumLineWidth = 3000;
     var lineWidthRange = maximumLineWidth - minimumLineWidth;
     var maximumSpeed = 60;
 
     lineCanvasContext.clearRect(0, 0, lineCanvas.width, lineCanvas.height);
-    lineCanvasContext.lineCap = 'round';
-    lineCanvasContext.shadowBlur = 10;
+    lineCanvasContext.lineCap = 'line';
+    lineCanvasContext.shadowBlur = 60;
     lineCanvasContext.shadowColor = '#f5d679';
     
     for (var i = 1; i < points.length; i++) {

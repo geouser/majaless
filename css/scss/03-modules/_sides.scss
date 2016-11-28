@@ -133,6 +133,9 @@
         top: 0;
         max-width: 38%;
         opacity: 0;
+        -webkit-perspective: 1000px;
+           -moz-perspective: 1000px;
+                perspective: 1000px;
         -webkit-transition: .8s right .4s cubic-bezier(0, 0, 0.25, 1), opacity 1.5s ease .4s;
            -moz-transition: .8s right .4s cubic-bezier(0, 0, 0.25, 1), opacity 1.5s ease .4s;
             -ms-transition: .8s right .4s cubic-bezier(0, 0, 0.25, 1), opacity 1.5s ease .4s;
@@ -187,9 +190,12 @@
     }
     .imgSide {
         padding-right: 0;
-        .section-bg {
+        .slice-images {
             left: auto;
-            right: 0;
+            right: 0; 
+            .bg {
+                background-position: 50% 100%;
+            }
         }
     }
     .infoSide {

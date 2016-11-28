@@ -49,8 +49,8 @@ p {
 
 .music-control {
     border: 0;
-    width: 16px;
-    height: 20px;
+    width: 28px;
+    height: 10px;
     position: fixed;
     z-index: 2;
     bottom: 7.5%;
@@ -66,46 +66,29 @@ p {
     padding: 0;
     cursor: pointer;
 
-    svg {
+    span {
+        height: 10px;
         width: 100%;
         display: block;
+        overflow: hidden;
+        position: absolute;
+        bottom: 0;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
 
-        path {
-            fill: #fff;
-            -webkit-transition: all 0.3s ease;
-            -o-transition: all 0.3s ease;
-            transition: all 0.3s ease;
-        }
-    }
-
-
-    &:hover {
-        svg {
-            path {
-                fill: $gold;
-            }
+        img {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
         }
     }
 
     &.muted {
-        svg {
-            path {
-                fill: #fff;
-            }
-        }
-
-        &:before {
-            width: 30px;
-            height: 3px;
-            background-color: #fff;
-            content: '';
-            -webkit-transform: rotate(-45deg) translate(-50%, -50%);
-            -ms-transform: rotate(-45deg) translate(-50%, -50%);
-            -o-transform: rotate(-45deg) translate(-50%, -50%);
-            transform: rotate(-45deg) translate(-50%, -50%);
-            position: absolute;
-            left: 5px;
-            top: 0;
+        span {
+            height: 2px;
         }
     }
 
@@ -128,4 +111,3 @@ p {
         padding-right: 0!important;
     }
 }
-

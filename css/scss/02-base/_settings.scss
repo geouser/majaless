@@ -49,11 +49,16 @@ p {
 
 .music-control {
     border: 0;
-    width: 20px;
+    width: 16px;
+    height: 20px;
     position: fixed;
     z-index: 2;
-    bottom: 10px;
-    right: 10px;
+    bottom: 7.5%;
+    right: 4%;
+    -webkit-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    -o-transform: translateY(50%);
+    transform: translateY(50%);
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
@@ -61,18 +66,50 @@ p {
     padding: 0;
     cursor: pointer;
 
+    svg {
+        width: 100%;
+        display: block;
+
+        path {
+            fill: #fff;
+            -webkit-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+    }
+
+
     &:hover {
-        opacity: .8;
+        svg {
+            path {
+                fill: $gold;
+            }
+        }
     }
 
     &.muted {
-        opacity: .4;
+        svg {
+            path {
+                fill: #fff;
+            }
+        }
+
+        &:before {
+            width: 30px;
+            height: 3px;
+            background-color: #fff;
+            content: '';
+            -webkit-transform: rotate(-45deg) translate(-50%, -50%);
+            -ms-transform: rotate(-45deg) translate(-50%, -50%);
+            -o-transform: rotate(-45deg) translate(-50%, -50%);
+            transform: rotate(-45deg) translate(-50%, -50%);
+            position: absolute;
+            left: 5px;
+            top: 0;
+        }
     }
 
-    img {
-        width: 100%;
-        display: block;
-    }
+    
 }
 
 // lAYOUT

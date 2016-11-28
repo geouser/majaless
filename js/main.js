@@ -276,8 +276,8 @@ function create_canvas(){
    * This line is used to mask the original image.
    */
   function drawLineCanvas() {
-    var minimumLineWidth = 150;
-    var maximumLineWidth = 200;
+    var minimumLineWidth = 60;
+    var maximumLineWidth = 60;
     var lineWidthRange = maximumLineWidth - minimumLineWidth;
     var maximumSpeed = 60;
 

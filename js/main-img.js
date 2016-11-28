@@ -358,6 +358,11 @@
                         translation : {x: 5, y: 5, z: 0},
                         reverseAnimation : {duration : 800, easing : 'easeOutQuart'}
                     },
+                    imgWrapperSmall : {
+                        translation : {x: 1, y: 1, z: 3},
+                        rotation : {x: -1, y: -3, z: 0},
+                        reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
+                    },
                     caption : {
                         translation : {x: 10, y: 10, z: [0,50]},
                         reverseAnimation : {duration : 1000, easing : 'easeOutQuart'}
@@ -373,6 +378,11 @@
                     lines : {
                         translation : {x: 40, y: 40, z: 0},
                         reverseAnimation : {duration : 1500, easing : 'easeOutElastic'}
+                    },
+                    imgWrapperSmall : {
+                        translation : {x: 1, y: 1, z: 3},
+                        rotation : {x: -1, y: -3, z: 0},
+                        reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
                     },
                     caption : {
                         translation : {x: 20, y: 20, z: 0},
@@ -395,7 +405,7 @@
                 var idx = 0;
                 [].slice.call(document.querySelectorAll('a.tilter')).forEach(function(el, pos) { 
                     idx = pos%2 === 0 ? idx+1 : idx;
-                    new TiltFx(el, tiltSettings[idx-1]);
+                    new TiltFx(el, tiltSettings[idx-4]);
                 });
             }
 

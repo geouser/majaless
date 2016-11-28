@@ -141,6 +141,9 @@
             -ms-transition: .8s right .4s cubic-bezier(0, 0, 0.25, 1), opacity 1.5s ease .4s;
              -o-transition: .8s right .4s cubic-bezier(0, 0, 0.25, 1), opacity 1.5s ease .4s;
                 transition: .8s right .4s cubic-bezier(0, 0, 0.25, 1), opacity 1.5s ease .4s;
+        img {
+            max-width: 100%;
+        }
         &.shown {
             right: 0;
             opacity: 1;

@@ -110,8 +110,9 @@
 	 */
 	TiltFx.prototype._init = function() {
 		this.DOM.animatable = {};
-		this.DOM.animatable.imgWrapper = this.DOM.el.querySelector('.tilter__figure:not(.tilter__figure--smallMove)');
+		this.DOM.animatable.imgWrapper = this.DOM.el.querySelector('.tilter__figure');
         this.DOM.animatable.imgWrapperSmall = this.DOM.el.querySelector('.tilter__figure--smallMove');
+        this.DOM.animatable.imgWrapperMid = this.DOM.el.querySelector('.tilter__figure--middleMove');
 		this.DOM.animatable.lines = this.DOM.el.querySelector('.tilter__deco--lines');
 		this.DOM.animatable.caption = this.DOM.el.querySelector('.tilter__caption');
 		this.DOM.animatable.overlay = this.DOM.el.querySelector('.tilter__deco--overlay');
@@ -229,6 +230,11 @@
                         rotation : {x: -1, y: -3, z: 0},
                         reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
                     },
+                    imgWrapperMid : {
+                        translation : {x: 1, y: 1, z: 3},
+                        rotation : {x: -2, y: -4, z: 0},
+                        reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
+                    },
                     lines : {
                         translation : {x: 10, y: 10, z: [0,70]},
                         rotation : {x: 0, y: 0, z: -2},
@@ -260,6 +266,11 @@
                         rotation : {x: -1, y: -3, z: 0},
                         reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
                     },
+                    imgWrapperMid : {
+                        translation : {x: 1, y: 1, z: 3},
+                        rotation : {x: -2, y: -4, z: 0},
+                        reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
+                    },
                     caption : {
                         translation : {x: 30, y: 30, z: [0,40]},
                         rotation : {x: [0,15], y: 0, z: 0},
@@ -284,6 +295,11 @@
                     imgWrapperSmall : {
                         translation : {x: 1, y: 1, z: 3},
                         rotation : {x: -1, y: -3, z: 0},
+                        reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
+                    },
+                    imgWrapperMid : {
+                        translation : {x: 1, y: 1, z: 3},
+                        rotation : {x: -2, y: -4, z: 0},
                         reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
                     },
                     caption : {
@@ -311,6 +327,11 @@
                     imgWrapperSmall : {
                         translation : {x: 1, y: 1, z: 3},
                         rotation : {x: -1, y: -3, z: 0},
+                        reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
+                    },
+                    imgWrapperMid : {
+                        translation : {x: 1, y: 1, z: 3},
+                        rotation : {x: -2, y: -4, z: 0},
                         reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
                     },
                     lines : {
@@ -361,6 +382,11 @@
                     imgWrapperSmall : {
                         translation : {x: 1, y: 1, z: 3},
                         rotation : {x: -1, y: -3, z: 0},
+                        reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
+                    },
+                    imgWrapperMid : {
+                        translation : {x: 1, y: 1, z: 3},
+                        rotation : {x: -2, y: -4, z: 0},
                         reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
                     },
                     caption : {

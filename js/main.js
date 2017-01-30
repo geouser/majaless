@@ -81,6 +81,11 @@ jQuery(document).ready(function($) {
       $.fn.fullpage.moveSectionDown();
     });
 
+    $(function(){
+        if ($('#collections').length > 0) {
+            $('#collections').mixItUp();
+        }
+    });
 
     /*---------------------------
                                 ACTIVATE MENU ITEM OVER CURRENT SECTION

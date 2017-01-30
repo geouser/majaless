@@ -3,33 +3,46 @@
     top: 0;
     z-index: 5;
     width: 100%;
-
+    padding: 20px 4%;
+    @include flex();
+    -webkit-transition: all .2s;
+       -moz-transition: all .2s;
+        -ms-transition: all .2s;
+         -o-transition: all .2s;
+            transition: all .2s;
     .site-logo {
-        position: fixed;
+        position: static;
         left: 50%;
         top: 7.5%;
         width: 7%;
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-
         img {
             display: block;
             width: 100%;
         }
     }
+    &.hasScrolled {
+        background-color: #231f20;
+        padding: 4px 4%;
+        -webkit-box-shadow: 0 0 10px rgba(0,0,0,.4);
+                box-shadow: 0 0 10px rgba(0,0,0,.4);
+    }
 }
 
+.fp .header {
+    padding: 0;
+    .site-logo {
+        position: fixed;
+         -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+}
 
 .open-menu {
-    position: fixed;
+    position: static;
     left: 4%;
     top: 7.5%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
     background-color: transparent;
     border: 0;
     cursor: pointer;
@@ -138,6 +151,14 @@
     }
 }
 
+.fp .open-menu {
+        -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: fixed;
+}
+
 
 .menu-container {
     width: 100%;
@@ -242,14 +263,10 @@
 
 
 .languages {
-    position: fixed;
+    position: static;
     right: 4%;
     top: 7.5%;
     z-index: 2;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
 
     a {
         color: #fff;
@@ -263,4 +280,10 @@
             color: $gold;
         }
     }
+}
+.fp .languages {
+    position: fixed;    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
 }

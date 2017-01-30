@@ -11,6 +11,25 @@
     width: 100%;
     height: 100%;
 }
+
+
+
+.illustrated-info {
+    @include flex($alignI: stretch);
+    height: 750px;
+    margin-bottom: 130px;
+    .infoSide {
+        padding-bottom: 290px;
+    }
+}
+.fullpage-section .illustrated-info {
+    height: 100%;
+    margin-bottom: 0;
+    .infoSide {
+        padding-bottom: 0px;
+    }
+}
+
 .imgSide {
     width: 50%;
     height: 100%;
@@ -50,14 +69,15 @@
     }
 }
 
+
 .infoSide {
     width: 50%;
     padding-left: 70px;
     text-align: left;
     position: relative;
     height: 100%;
-    height: 100%;
     z-index: 3;
+    margin-bottom: 130px;
     @include m1600 {
         padding-left: 30px;
     }
@@ -152,6 +172,11 @@
             right: 0;
             opacity: 1;
         }
+        &--bottom {
+            top: auto;
+            bottom: 0;
+            max-width: 93%;
+        }
     }
     .button {
         margin-top: 70px;
@@ -191,8 +216,8 @@
     }
 }
 
-.fullpage-section--infoLeft {
-    .wrapper--flex {
+.section--infoLeft {
+    .illustrated-info {
         -webkit-flex-direction: row-reverse;
             -ms-flex-direction: row-reverse;
                 flex-direction: row-reverse;
@@ -257,3 +282,30 @@
     }
 }
 
+
+
+.animated .infoSide .smallImg {
+    right: 0;
+    opacity: 1;
+}
+.animated .infoSide .button {
+    margin-left: 0;
+    opacity: 1;
+}
+.animated .infoSide h2 {
+    margin-left: 0;
+    opacity: 1;
+}
+.animated  .infoSide p {
+    margin-left: 0;
+    opacity: 1;
+}
+.animated.section--infoLeft .infoSide h2 {
+    left: auto;
+    text-align: right;
+    right: -310px;
+}
+.animated.section--infoLeft .infoSide .smallImg.shown {
+    left: 0;
+    opacity: 1;
+}

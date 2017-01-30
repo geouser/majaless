@@ -7,9 +7,7 @@ window.params = {
 
 jQuery(document).ready(function($) {
     create_canvas();
-
-
-    $('#background_music')[0].play();
+    /*$('#background_music')[0].play();
     $('#background_music')[0].volume = .02;
 
     $('.music-control').on('click', function(event) {
@@ -20,6 +18,19 @@ jQuery(document).ready(function($) {
       } else {
         $('#background_music')[0].play();
       }
+    });*/
+
+    
+    /*---------------------------
+                                  Animation-delay
+    ---------------------------*/
+    $('[data-delay]').each(function(index, el) {
+      $(this).css({
+        '-webkit-transition-delay':$(this).attr('data-delay'),
+        '-o-transition-delay': $(this).attr('data-delay'),
+        '-moz-transition-delay': $(this).attr('data-delay'),
+        'transition-delay': $(this).attr('data-delay')
+      });
     });
 
     /*---------------------------
@@ -56,6 +67,12 @@ jQuery(document).ready(function($) {
             afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
             onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
         });
+
+        $(window).on('load', function(event) {
+          event.preventDefault();
+          $('.main-screen').addClass('animated');
+          $.fn.fullpage.moveTo(1);
+        });
     }
 
 
@@ -65,10 +82,29 @@ jQuery(document).ready(function($) {
     });
 
 
-    $(window).on('load', function(event) {
-      event.preventDefault();
-      $('.main-screen').addClass('animated');
-      $.fn.fullpage.moveTo(1);
+    /*---------------------------
+                                ACTIVATE MENU ITEM OVER CURRENT SECTION
+    ---------------------------*/
+    var $sections = $('section');
+    var windowHalf = $(window).height() / 2;
+
+    $sections.each(function(){
+      if ($(this).offset().top < windowHalf) {
+        $(this).addClass('animated');
+      }
+    });
+
+    $(window).on("scroll", function () {
+        var currentScroll = $(this).scrollTop();
+        var $currentSection;
+        $sections.each(function(){
+          var divPosition = $(this).offset().top - windowHalf;
+          
+          if( divPosition - 1 < currentScroll ){
+            $currentSection = $(this);
+            $currentSection.addClass('animated');
+          }
+        });
     });
 
 
@@ -112,18 +148,6 @@ jQuery(document).ready(function($) {
     });
 
 
-
-    /*---------------------------
-                                  Animation-delay
-    ---------------------------*/
-    $('[data-delay]').each(function(index, el) {
-      $(this).css({
-        '-webkit-transition-delay':$(this).attr('data-delay'),
-        '-o-transition-delay': $(this).attr('data-delay'),
-        '-moz-transition-delay': $(this).attr('data-delay'),
-        'transition-delay': $(this).attr('data-delay')
-      });
-    });
 
 
     /*---------------------------
@@ -276,8 +300,8 @@ function create_canvas(){
    * This line is used to mask the original image.
    */
   function drawLineCanvas() {
-    var minimumLineWidth = 200;
-    var maximumLineWidth = 200;
+    var minimumLineWidth = 60;
+    var maximumLineWidth = 60;
     var lineWidthRange = maximumLineWidth - minimumLineWidth;
     var maximumSpeed = 60;
 
@@ -308,6 +332,12 @@ function create_canvas(){
       lineCanvasContext.lineTo(point.x, point.y);
       lineCanvasContext.stroke();
     }
+      var canvasHeight = $('canvas').height();
+      var canvasWidth = $('canvas').width();
+      $('#canvas-overlay').css({
+        'height': canvasHeight,
+        'width': canvasWidth
+      });
   }
 
   /**
@@ -339,4 +369,5 @@ function create_canvas(){
     imageCanvasContext.drawImage(lineCanvas, 0, 0);
 
   }  
+
 }

@@ -1,5 +1,7 @@
 .collections-list {
     margin-top: 140px;
+    @include flex();
+    margin-bottom: -140px;
 }
 
 .collections-item {
@@ -64,9 +66,13 @@
 }
 
 .collections-list--3x {
+    margin-bottom: -60px;
+    margin: 0 -3%;
+    -webkit-justify-content: center;
+            justify-content: center;
     .collections-item {
-        width: 30%;
-        margin-bottom: 4.5%;
+        width: 28%;
+        margin: 2.5%;
         &:after {
             padding-bottom: 100%;
         }
@@ -114,13 +120,42 @@
     display: none;
 }
 #collections {
-    -webkit-justify-content: space-around;
-            justify-content: space-around;
+    -webkit-justify-content: center;
+            justify-content: center;
 }
 #collections {
     margin-top: 25px;
     .collections-item {
         width: 28%;
         margin: 2.5%;
+    }
+}
+
+.wallpapers {
+    margin-top: 140px;
+}
+
+.wallpaper {
+    @include flex();
+    margin-bottom: 140px;
+    &__info {
+        width: 52%;
+        padding-right: 4%;
+        text-align: left;
+    }
+    &__img {
+        width: 48%;
+        img {
+            width: 100%;
+        }
+    }
+    &:nth-of-type(2n) {
+        .wallpaper__info {
+            padding-right: 0;
+            padding-left: 4%;
+        }
+        -webkit-flex-direction: row-reverse;
+            -ms-flex-direction: row-reverse;
+                flex-direction: row-reverse;
     }
 }

@@ -1,3 +1,21 @@
 .offer {
-    height: 800px;
+    height: 360px;
+    text-align: center;
+    background-position: 50% 50%;
+    margin-bottom: 145px;
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    &:before {
+        display: inline-block;
+        vertical-align: middle;
+        content: "";
+        height: 100%;
+    }
+    h1 {
+        max-width: 98%;
+        display: inline-block;
+        vertical-align: middle;
+        margin-bottom: 0;
+    }
 }

@@ -300,12 +300,13 @@
     margin-left: 0;
     opacity: 1;
 }
+
 .animated.section--infoLeft .infoSide h2 {
     left: auto;
     text-align: right;
     right: -310px;
 }
-.animated.section--infoLeft .infoSide .smallImg.shown {
+.animated.section--infoLeft .infoSide .smallImg {
     left: 0;
     opacity: 1;
 }

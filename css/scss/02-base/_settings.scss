@@ -56,6 +56,11 @@ canvas {
     @include transition(all, 1s);
     position: relative;
     top: -20px;
+    -webkit-transition-delay: .2s;
+       -moz-transition-delay: .2s;
+        -ms-transition-delay: .2s;
+         -o-transition-delay: .2s;
+            transition-delay: .2s;
 }
 .subtitle {
     font: 18px $gl;

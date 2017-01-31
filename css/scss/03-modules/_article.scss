@@ -15,12 +15,20 @@ article {
        -moz-column-gap: 140px;
             column-gap: 140px;
     padding-left: 12.5%;
-    opacity: 0;
+    top: 30px;
+}
+article p {
     position: relative;
     top: 30px;
-    @include transition(all, 1s)
+    opacity: 0;
+    @include transition(all, 1s);
+    -webkit-transition-delay: .4s;
+       -moz-transition-delay: .4s;
+        -ms-transition-delay: .4s;
+         -o-transition-delay: .4s;
+            transition-delay: .4s;
 }
-.animated .article-text {
+.animated article p {
     opacity: 1;
     top: 0;
 }
@@ -31,6 +39,16 @@ article {
     margin-left: 120px;
     margin-bottom: 40px;
     @extend %clearfix;
+    opacity: 0;
+    @include transition(all, 2s);
+    -webkit-transition-delay: .6s;
+       -moz-transition-delay: .6s;
+        -ms-transition-delay: .6s;
+         -o-transition-delay: .6s;
+            transition-delay: .6s;
+}
+.animated .article-slider {
+    opacity: 1;
 }
 .slick-dots li button:before {
     display: none;

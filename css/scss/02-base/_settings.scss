@@ -57,6 +57,14 @@ canvas {
     position: relative;
     top: -20px;
 }
+.subtitle {
+    font: 18px $gl;
+    text-transform: uppercase;
+    color: #F5D679;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
 h3 {
     font: 60px $pfb;
     margin-bottom: 55px;
@@ -68,6 +76,28 @@ h3 {
 p {
     color: #FFF;
 }
+
+.contacts-address {
+    font: 36px $pfb;
+    color: #AAA;
+    padding: 0 18%;
+    margin-bottom: 40px;
+}
+.tel,
+.mail {
+    font: 36px $pfb;
+    color: #FFF;
+    display: block;
+    text-align: center;
+    span {
+        color: #AAA;
+    }
+}
+
+
+// lAYOUT
+// ---------------------------
+
 .fullpage-section--padding {
     .fp-tableCell {
         display: block;
@@ -85,9 +115,6 @@ main {
     z-index: 2;
 }
 
-
-// lAYOUT
-// ---------------------------
 .wrapper {
 	width: 83.333%;
 	margin: 0 auto;

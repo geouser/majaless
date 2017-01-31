@@ -6,7 +6,7 @@ window.params = {
 
 
 jQuery(document).ready(function($) {
-    create_canvas();
+    //create_canvas();
     /*$('#background_music')[0].play();
     $('#background_music')[0].volume = .02;
 
@@ -19,6 +19,8 @@ jQuery(document).ready(function($) {
         $('#background_music')[0].play();
       }
     });*/
+
+    $('body').append('<div class="menu-overlay"></div>')
 
     
     /*---------------------------
@@ -137,6 +139,16 @@ jQuery(document).ready(function($) {
       event.preventDefault();
       $(this).toggleClass('active');
       $('.menu-container').toggleClass('active');
+      $('canvas').toggleClass('active');
+      $('.menu-overlay').toggleClass('active');
+    });
+    /*prevent scrolling parents block*/
+    $( '.menu-container' ).on( 'mousewheel DOMMouseScroll', function ( e ) {
+        var e0 = e.originalEvent,
+            delta = e0.wheelDelta || -e0.detail;
+
+        this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+        e.preventDefault();
     });
 
     var mi = 0;
@@ -285,7 +297,7 @@ function create_canvas(){
    * Resizes both canvases to fill the window.
    */
   function resizeCanvases() {
-    imageCanvas.width = lineCanvas.width = window.innerWidth;
+    imageCanvas.width = lineCanvas.width = $("body").prop("clientWidth");
     imageCanvas.height = lineCanvas.height = window.innerHeight;
   }
 

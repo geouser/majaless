@@ -15,6 +15,7 @@
         left: 50%;
         top: 7.5%;
         width: 7%;
+        z-index: 11;
         img {
             display: block;
             width: 100%;
@@ -40,14 +41,14 @@
 }
 
 .open-menu {
-    position: static;
+    position: relative;
     left: 4%;
     top: 7.5%;
     background-color: transparent;
     border: 0;
     cursor: pointer;
     padding: 0;
-    z-index: 10;
+    z-index: 11;
 
     .hamburger {
         width: 20px;
@@ -169,55 +170,71 @@
     right: 0;
     bottom: 0;
     overflow: auto;
-    background-color: #231F20;
     z-index: 5;
     visibility: hidden;
     opacity: 0;
+    padding: 160px 0;
     -webkit-transition: all .5s ease;
     -o-transition: all .5s ease;
     transition: all .5s ease;
     text-align: center;
+    @include flex($alignI: center);
 
     &.active {
         visibility: visible;
         opacity: 1;
+        z-index: 10;
     }
-
-    &:before {
-        content: '';
-        height: 100%;
-        margin-right: -4px;
-        vertical-align: middle;
-        display: inline-block;
-    }
-
 
     .menu-list {
         text-align: left;
         display: inline-block;
         vertical-align: middle;
         margin: 0;
-        padding: 30px 0;
         list-style: none;
+        width: 100%;
+        @include flex($alignI: center, $justify: flex-start);
 
         .menu-item {
             -webkit-transition: all 1s ease;
             -o-transition: all 1s ease;
             transition: all 1s ease;
             opacity: 0;
+            width: 50%;
+            text-align: left;
+            padding-left: 200px;
             -webkit-transform: matrix3d(1, 0, 0, 0, 0, 0, 1, 0, 0, -1, 0, 0, -25, 0, 0, 1);
             -ms-transform: matrix3d(1, 0, 0, 0, 0, 0, 1, 0, 0, -1, 0, 0, -25, 0, 0, 1);
             -o-transform: matrix3d(1, 0, 0, 0, 0, 0, 1, 0, 0, -1, 0, 0, -25, 0, 0, 1);
             transform: matrix3d(1, 0, 0, 0, 0, 0, 1, 0, 0, -1, 0, 0, -25, 0, 0, 1);
-            margin: 5px 0;
+            margin: 27px 0;
+
+            &:before {
+                content: '';
+                width: 26px;
+                height: 26px;
+                background-position: -2px -28px;
+                background-image: url(../images/menu-sprite.png);
+                background-repeat: no-repeat;
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 20px;
+                margin-top: 2px;
+            }
+
+            &:hover:before {
+                background-position: -2px -0px;
+            }
 
             a {
-                font-size: 25px;
+                font-size: 36px;
                 color: #fff;
                 font-family: $pfb;
                 position: relative;
                 display: inline-block;
+                vertical-align: middle;
                 overflow: hidden;
+                margin-top: -2px;
 
                 &:after {
                     content: attr(data-letters);
@@ -238,10 +255,12 @@
             }
 
             &.current-menu-item {
-                opacity: .5!important;
+                &:before {
+                    background-position: -2px -0px;
+                }
 
                 a:after {
-                    display: none;
+                    width: 100%;
                 }
             }
         }
@@ -259,6 +278,19 @@
             }
         }
     }
+
+
+
+    .first-letter {
+        left: 8.3%;
+        top: 15%;
+        position: fixed;
+    }
+    .second-letter {
+        bottom: 15%;
+        right: 8.3%;
+        position: fixed;
+    }
 }
 
 
@@ -266,7 +298,8 @@
     position: static;
     right: 4%;
     top: 7.5%;
-    z-index: 2;
+    z-index: 11;
+    min-width: 80px;
 
     a {
         color: #fff;
@@ -282,12 +315,35 @@
     }
 }
 .fp .languages {
-    position: fixed;    -webkit-transform: translateY(-50%);
+    position: fixed;
+    -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 
-.languages {
-    min-width: 80px;
+
+canvas.active {
+    z-index: 4;
+}
+.menu-overlay {
+    background-image: url(../images/ornament.jpg);
+    background-size: cover;
+    background-position: 0 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 4;
 }

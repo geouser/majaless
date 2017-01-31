@@ -151,3 +151,8 @@ main {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+
+
+.letter {
+    pointer-events: none;
+}

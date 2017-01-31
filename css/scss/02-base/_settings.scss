@@ -6,6 +6,13 @@ body {
     background-color: #231F20;
     color: #FFF;
     font: 24px/42px $gl;
+    @media (max-width: 1600px) {
+        font: 22px/38px $gl;
+    }
+    @media (max-width: 1400px) {
+        font-size: 20px;
+        line-height: 34px;
+    }
 }
 body {
     padding-top: 160px;
@@ -61,6 +68,12 @@ canvas {
         -ms-transition-delay: .2s;
          -o-transition-delay: .2s;
             transition-delay: .2s;
+    @media (max-width: 1600px) {
+        font: 65px/66px $pfb;
+    }
+    @media (max-width: 1400px) {
+        font: 59px/60px $pfb;
+    }
 }
 .subtitle {
     font: 18px $gl;

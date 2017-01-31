@@ -3,6 +3,12 @@ article {
     p {
         margin-bottom: 45px;
         color: #AAA;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        @media (max-width: 1400px) {
+            margin-bottom: 30px;
+        }
     }
     @extend %clearfix;
 }
@@ -34,18 +40,31 @@ article p {
 }
 
 .article-slider {
-    width: 720px;
+    width: 45%;
     float: right;
     margin-left: 120px;
     margin-bottom: 40px;
     @extend %clearfix;
     opacity: 0;
+    position: relative;
+    z-index: 2;
     @include transition(all, 2s);
     -webkit-transition-delay: .6s;
        -moz-transition-delay: .6s;
         -ms-transition-delay: .6s;
          -o-transition-delay: .6s;
             transition-delay: .6s;
+    img {
+        width: 100%;
+        height: auto;
+    }
+    @media (max-width: 1600px) {
+        margin-left: 100px;
+    }
+    @media (max-width: 1400px) {
+        margin-left: 80px;
+        margin-bottom: 20px;
+    }
 }
 .animated .article-slider {
     opacity: 1;

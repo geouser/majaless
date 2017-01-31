@@ -5,13 +5,12 @@ html,
 body {
     background-color: #231F20;
     color: #FFF;
-    font: 24px/42px $gl;
+    font: 24px $gl;
     @media (max-width: 1600px) {
-        font: 22px/38px $gl;
+        font: 22px $gl;
     }
     @media (max-width: 1400px) {
         font-size: 20px;
-        line-height: 34px;
     }
 }
 body {

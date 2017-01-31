@@ -1,5 +1,11 @@
 .image-gallery{
     margin: 110px -2.8%;
+    @media (max-width: 1600px) {
+        margin: 80px -2.8%;
+    }
+    @media (max-width: 1400px) {
+        margin: 60px -2.8%;
+    }
     @include flex($justify: space-around);
     a {
         margin: 2%;
@@ -37,5 +43,9 @@
     @include flex($justify: space-around);
     img {
         margin: 40px 5%;
+        max-width: 100%;
+    }
+    @media (max-width: 1400px) {
+      margin: 40px -5%;
     }
 }

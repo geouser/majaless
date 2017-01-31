@@ -21,6 +21,19 @@
     .infoSide {
         padding-bottom: 290px;
     }
+    @media (max-width: 1600px) {
+        height: 650px;
+        margin-bottom: 120px;
+        .infoSide {
+            padding-bottom: 260px;
+        }
+    }
+    @media (max-width: 1400px) {
+        height: 500px;
+        .infoSide {
+            padding-bottom: 200px;
+        }
+    }
 }
 .fullpage-section .illustrated-info {
     height: 100%;

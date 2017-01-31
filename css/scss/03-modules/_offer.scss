@@ -12,6 +12,14 @@
         -ms-transition: 2s opacity .1s ease;
          -o-transition: 2s opacity .1s ease;
             transition: 2s opacity .1s ease;
+    @media (max-width: 1600px) {
+        margin-bottom: 100px;
+        height: 320px;
+    }
+    @media (max-width: 1400px) {
+        margin-bottom: 80px;
+        height: 300px;
+    }
     &:before {
         display: inline-block;
         vertical-align: middle;

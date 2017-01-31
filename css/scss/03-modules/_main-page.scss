@@ -11,6 +11,9 @@
             -ms-transition: 1.6s opacity 3s cubic-bezier(0, 0, 0.25, 1);
              -o-transition: 1.6s opacity 3s cubic-bezier(0, 0, 0.25, 1);
                 transition: 1.6s opacity 3s cubic-bezier(0, 0, 0.25, 1);
+        @media (max-width: 1400px) {
+            font-size: 16px;
+        }
     }
     .button {
         opacity: 0;
@@ -36,6 +39,13 @@
             -ms-transition: 2s all 1.4s cubic-bezier(0, 0, 0.25, 1);
              -o-transition: 2s all 1.4s cubic-bezier(0, 0, 0.25, 1);
                 transition: 2s all 1.4s cubic-bezier(0, 0, 0.25, 1);
+        @media (max-width: 1600px) {
+            font: 65px/66px $pfb;
+        }
+        @media (max-width: 1400px) {
+            font: 59px/60px $pfb;
+            margin-bottom: 40px;
+        }
     }
     &.animated {
         small,

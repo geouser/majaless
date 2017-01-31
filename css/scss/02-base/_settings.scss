@@ -5,11 +5,20 @@ html,
 body {
     background-color: #231F20;
     color: #FFF;
-    font: 24px/42px $gl;
+    font: 24px $gl;
+    @media (max-width: 1600px) {
+        font: 22px $gl;
+    }
+    @media (max-width: 1400px) {
+        font-size: 20px;
+    }
 }
 body {
     padding-top: 160px;
     height: auto;
+    @media (max-width: 1400px) {
+        padding-top: 100px;
+    }
 }
 .fp {
     padding-top: 0;
@@ -61,6 +70,13 @@ canvas {
         -ms-transition-delay: .2s;
          -o-transition-delay: .2s;
             transition-delay: .2s;
+    @media (max-width: 1600px) {
+        font: 65px/66px $pfb;
+    }
+    @media (max-width: 1400px) {
+        font: 59px/60px $pfb;
+        margin-bottom: 40px;
+    }
 }
 .subtitle {
     font: 18px $gl;

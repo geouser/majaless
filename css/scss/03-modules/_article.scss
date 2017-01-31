@@ -22,6 +22,20 @@ article {
             column-gap: 140px;
     padding-left: 12.5%;
     top: 30px;
+    @media (max-width: 1600px) {
+        padding-left: 11%;
+        margin-bottom: 160px;
+        -webkit-column-gap: 120px;
+       -moz-column-gap: 120px;
+            column-gap: 120px;
+    }
+    @media (max-width: 1400px) {
+        padding-left: 9%;
+        margin-bottom: 120px;
+        -webkit-column-gap: 80px;
+       -moz-column-gap: 80px;
+            column-gap: 80px;
+    }
 }
 article p {
     position: relative;

@@ -17,6 +17,9 @@ body {
 body {
     padding-top: 160px;
     height: auto;
+    @media (max-width: 1400px) {
+        padding-top: 100px;
+    }
 }
 .fp {
     padding-top: 0;
@@ -73,6 +76,7 @@ canvas {
     }
     @media (max-width: 1400px) {
         font: 59px/60px $pfb;
+        margin-bottom: 40px;
     }
 }
 .subtitle {

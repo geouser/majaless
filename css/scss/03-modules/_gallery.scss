@@ -5,10 +5,17 @@
         margin: 2%;
         width: 21%;
         display: block;
-        background-position: 50% 50%;
+        figure {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+                  background-position: 50% 50%;
         -webkit-background-size: cover;
              -o-background-size: cover;
                 background-size: cover;
+        }
         &:after {
           content: "";
           display: block;

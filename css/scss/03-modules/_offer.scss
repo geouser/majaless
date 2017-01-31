@@ -6,6 +6,12 @@
     -webkit-background-size: cover;
          -o-background-size: cover;
             background-size: cover;
+    opacity: 0;
+    -webkit-transition: 2s opacity .1s ease;
+       -moz-transition: 2s opacity .1s ease;
+        -ms-transition: 2s opacity .1s ease;
+         -o-transition: 2s opacity .1s ease;
+            transition: 2s opacity .1s ease;
     &:before {
         display: inline-block;
         vertical-align: middle;
@@ -18,4 +24,7 @@
         vertical-align: middle;
         margin-bottom: 0;
     }
+}
+.animated .offer {
+    opacity: 1;
 }

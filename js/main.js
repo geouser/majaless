@@ -175,6 +175,11 @@ jQuery(document).ready(function($) {
         mainClass: 'my-mfp-slide-bottom'
     });
 
+    $('.article-slider').slick({
+        arrows: false,
+        dots: true
+    });
+
 
 
     /*----------------------------

@@ -3,7 +3,6 @@
     -o-transition: all 1s ease;
     transition: all 1s ease;
     z-index: 2;
-    bottom: -30px;
     position: relative;
     margin-top: 140px;
     margin-bottom: 30px;
@@ -37,16 +36,22 @@
     bottom: 7.5%;
     z-index: 2;
 }
-.fb .footer {
+.fp .footer {
     margin-top: 0;
     margin-bottom: 0;
+    z-index: 10;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+}
+
+.fullpage + .footer {
     opacity: 0;
     visibility: hidden;
-    position: fixed;
-        left: 0;
-    right: 0;
     -webkit-transform: translateY(50%);
     -ms-transform: translateY(50%);
     -o-transform: translateY(50%);
     transform: translateY(50%);
+    bottom: -30px;
 }

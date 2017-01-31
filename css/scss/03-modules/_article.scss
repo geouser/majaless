@@ -4,6 +4,7 @@ article {
         margin-bottom: 45px;
         color: #AAA;
     }
+    @extend %clearfix;
 }
 .article-text {
     margin-bottom: 190px;
@@ -22,4 +23,45 @@ article {
 .animated .article-text {
     opacity: 1;
     top: 0;
+}
+
+.article-slider {
+    width: 720px;
+    float: right;
+    margin-left: 120px;
+    margin-bottom: 40px;
+    @extend %clearfix;
+}
+.slick-dots li button:before {
+    display: none;
+}
+.slick-dots li {
+    width: auto;
+    height: auto;
+}
+.slick-dots li button {
+    color: #FFF;
+    font: 14px $gm;
+    display: inline-block;
+    vertical-align: middle;
+}
+.slick-dots .slick-active {
+    opacity: .6;
+}
+
+.slick-dots li:first-of-type:before {
+    content: "\02190";
+    display: inline-block;
+    vertical-align: middle;
+    color: #FFF;
+    margin-right: 2px;
+    margin-top: 2px;
+}
+.slick-dots li:last-of-type:after {
+    content: "\02192";
+    display: inline-block;
+    vertical-align: middle;
+    color: #FFF;
+    margin-left: 4px;
+    margin-top: 2px;
 }

@@ -55,7 +55,11 @@
           -webkit-box-shadow: 0 0 2px rgba(0,0,0,.4);
                   box-shadow: 0 0 2px rgba(0,0,0,.4);
           z-index: 2;
-          transform: translateZ(20px);
+          -webkit-transform: translateZ(20px);
+             -moz-transform: translateZ(20px);
+              -ms-transform: translateZ(20px);
+               -o-transform: translateZ(20px);
+                  transform: translateZ(20px);
             background-color: rgba(0,0,0,.6);
           opacity: 0;
         -webkit-transition: all .4s ease-out;
@@ -276,4 +280,35 @@
                     flex-direction: row;
         }
     }
+}
+
+.gallery a i {
+    width: 60px;
+    height: 60px;
+    z-index: 3;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transform: translateZ(40px);
+        -moz-transform: translateZ(40px);
+              -ms-transform: translateZ(40px);
+               -o-transform: translateZ(40px);
+                  transform: translateZ(40px);
+    margin: auto;
+    background-image: url("../images/zoom.svg");
+    -webkit-background-size: 100%;
+         -o-background-size: 100%;
+            background-size: 100%;
+    -webkit-transition: all .2s;
+       -moz-transition: all .2s;
+        -ms-transition: all .2s;
+         -o-transition: all .2s;
+            transition: all .2s;
+    opacity: 0;
+}
+.gallery a:hover i {
+    opacity: 1;
 }

@@ -116,8 +116,9 @@
     -o-transform: translateY(50%);
     transform: translateY(50%);
     @media (max-width: 1000px) {
-        bottom: 3.5%;
+        bottom: 20px;
     }
+
     a {
         display: inline-block;
         vertical-align: middle;

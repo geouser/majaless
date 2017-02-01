@@ -32,16 +32,7 @@
     }
 }
 
-.fp .header {
-    padding: 0;
-    .site-logo {
-        position: fixed;
-         -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-    }
-}
+
 
 .open-menu {
     position: relative;
@@ -155,13 +146,6 @@
     }
 }
 
-.fp .open-menu {
-        -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-    position: fixed;
-}
 
 
 .menu-container {
@@ -500,9 +484,9 @@
     right: 4%;
     top: 7.5%;
     z-index: 11;
-    min-width: 80px;
+    min-width: 84px;
     text-align: right;
-
+    
     a {
         color: #fff;
         font-family: $pfi;
@@ -515,13 +499,6 @@
             color: $gold;
         }
     }
-}
-.fp .languages {
-    position: fixed;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
 }
 
 

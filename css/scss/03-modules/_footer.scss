@@ -33,14 +33,14 @@
     &__phone,
     &__email {
         width: 200px;
-        @media (max-width: 1000px) {
+        @media (max-width: 1030px) {
             display: block;
             margin: 0 auto;
             text-align: center;
         }
     }
     &__address {
-        @media (max-width: 1000px) {
+        @media (max-width: 1030px) {
             display: block;
             margin: 10px auto;
             br {
@@ -51,32 +51,37 @@
 
     &__phone {
         text-align: left;
-        @media (max-width: 1000px) {
+        @media (max-width: 1030px) {
             text-align: center;
         }
     }
 
     &__email {
         text-align: right;
-        @media (max-width: 1000px) {
+        @media (max-width: 1030px) {
             text-align: center;
         }
     }
     .wrapper--flex {
-        @media (max-width: 1000px) {
+        @media (max-width: 1030px) {
             display: block;
         }
     }
 }
 
 
-    .fp-viewing-news .footer {
+    .fp-viewing-6 .footer {
         opacity: 1;
         visibility: visible;
         bottom: 7.5%;
         z-index: 2;
     }    
 
+
+
+.fp .footer {
+    margin-bottom: 60px;
+}
 @media (min-width: 1000px) {
 
 .fp .footer {

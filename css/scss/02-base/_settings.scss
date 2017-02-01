@@ -51,6 +51,8 @@ body {
     z-index: 0;
     left: 0;
     top: 0;
+    bottom: 0;
+    right: 0;
     background-image: url(../images/ornament.jpg);
     background-size: cover;
     background-position: 0 0;
@@ -164,6 +166,15 @@ p {
     color: #AAA;
     padding: 0 18%;
     margin-bottom: 40px;
+
+    @media (max-width: 1000px) {
+        font-size: 28px;
+    }
+
+    @media (max-width: 767px) {
+        padding: 0;
+        font-size: 24px;
+    }
 }
 .tel,
 .mail {
@@ -171,8 +182,34 @@ p {
     color: #FFF;
     display: block;
     text-align: center;
+
+    @media (max-width: 1000px) {
+        font-size: 26px;
+    }
+    @media (max-width: 767px) {
+        padding: 0;
+        font-size: 22px;
+    }
+
     span {
         color: #AAA;
+    }
+}
+
+
+.map_canvas {
+    width: 1550px;
+    height: 440px;
+    margin: 70px auto;
+
+    @media (max-width: 1550px) {
+        width: 100%;
+        height: 400px;
+    }
+
+    .gmnoprint,
+    .gm-style a {
+        display: none!important;
     }
 }
 

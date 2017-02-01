@@ -437,6 +437,12 @@
         @media (max-width: 1000px) {
             width: 100%;
             margin: 20px 0 !important;
+            -webkit-transform: none;
+            -ms-transform: none;
+            -o-transform: none;
+            transform: none;
+            opacity: 1;
+            visibility: visible;
         }
         h2 {
             font-family: $pfb;
@@ -722,6 +728,24 @@
 }
 
 
+.wallpaper-section {
+    .first-letter {
+        top: 15%;
+        left: 8%;
+    }
+}
+.furniture-section {
+    .first-letter {
+        top: 15%;
+        right: 8%;
+    }
+}
+.interior-section {
+    .first-letter {
+        top: 15%;
+        left: 8%;
+    }
+}
 
 .music-control {
     border: 0;

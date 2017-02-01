@@ -6,19 +6,26 @@ window.params = {
 
 
 jQuery(document).ready(function($) {
-    //create_canvas();
-    /*$('#background_music')[0].play();
-    $('#background_music')[0].volume = .02;
+    if ( !window.params.isMobile ) {
+      create_canvas();
+    }
 
-    $('.music-control').on('click', function(event) {
-      event.preventDefault();
-      $(this).toggleClass('muted');
-      if ($(this).hasClass('muted')) {
-        $('#background_music')[0].pause();
-      } else {
-        $('#background_music')[0].play();
-      }
-    });*/
+
+    if ( $('#background_music').length > 0 ) {
+      $('#background_music')[0].play();
+      $('#background_music')[0].volume = 0.1;
+
+      $('.music-control').on('click', function(event) {
+        event.preventDefault();
+        $(this).toggleClass('muted');
+        if ($(this).hasClass('muted')) {
+          $('#background_music')[0].pause();
+        } else {
+          $('#background_music')[0].play();
+        }
+      });  
+    }
+    
 
     $('body').append('<div class="menu-overlay"></div>')
 
@@ -266,6 +273,49 @@ jQuery(document).ready(function($) {
         });
         
     });
+
+
+    /*Google map init*/
+    var map;
+    function googleMap_initialize() {
+        var lat = $('#map_canvas').data('lat');
+        var long = $('#map_canvas').data('lng');
+
+        var mapCenterCoord = new google.maps.LatLng(lat, long);
+        var mapMarkerCoord = new google.maps.LatLng(lat, long);
+
+        var mapOptions = {
+            center: mapCenterCoord,
+            zoom: 10,
+            //draggable: false,
+            disableDefaultUI: true,
+            scrollwheel: false,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        var styles = [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}];
+
+
+        map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+        var styledMapType = new google.maps.StyledMapType(styles, {name: 'Styled'});
+        map.mapTypes.set('Styled', styledMapType);
+        map.setMapTypeId('Styled');
+        var markerImage = new google.maps.MarkerImage('images/location.png');
+        var marker = new google.maps.Marker({
+            icon: markerImage,
+            position: mapMarkerCoord, 
+            map: map,
+            title:"Majaless"
+        });
+        
+        $(window).resize(function (){
+            map.setCenter(mapCenterCoord);
+        });
+    }
+
+    if ( $('#map_canvas').length > 0 ) {
+        googleMap_initialize(); 
+    }
 
 }); // end file
 

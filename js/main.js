@@ -375,6 +375,10 @@ function create_canvas(){
   function resizeCanvases() {
     imageCanvas.width = lineCanvas.width = $("body").prop("clientWidth");
     imageCanvas.height = lineCanvas.height = window.innerHeight;
+    $('#canvas-overlay').css({
+      'height': window.innerHeight,
+      'width': $("body").prop("clientWidth")
+    });
   }
 
   /**
@@ -433,8 +437,8 @@ function create_canvas(){
       var canvasHeight = $('canvas').height();
       var canvasWidth = $('canvas').width();
       $('#canvas-overlay').css({
-        'height': canvasHeight,
-        'width': canvasWidth
+        'height': window.innerHeight,
+        'width': $("body").prop("clientWidth")
       });
   }
 

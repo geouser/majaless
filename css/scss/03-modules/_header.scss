@@ -397,11 +397,99 @@
     }
 
     @media (max-width: 1000px) {
+        padding: 80px 0 60px;
+
+        &:before{
+            content: '';
+            width: 100%;
+            height: 15%;
+            max-height: 80px;
+            background-color: #231F20;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 10;
+        }
+
+        .wrapper {
+            width: 100%;
+        }
+
         .letter {
             display: none;
         }
+        .menu-list {
+            width: auto;
+            margin: 0 auto;
+            display: inline-block;
+
+            .menu-item {
+                width: auto;
+                padding-left: 0;
+                display: block;
+
+                &:before {
+                    margin-right: 15px;
+                }
+
+                a {
+                    font-size: 22px;
+                }
+            }
+        }
+
+        .footer {
+            position: static!important;
+            -webkit-transform: none;
+            -ms-transform: none;
+            -o-transform: none;
+            transform: none;
+            padding: 20px 0 0;
+            width: 320px;
+            margin: 0 auto;
+
+            .wrapper {
+                width: 100%;
+                padding: 0 10px!important;
+            }
+
+            &__phone,
+            &__email,
+            &__studio {
+                width: 100%;
+                text-align: center;
+            }
+
+            &__address,
+            &__phone,
+            &__email {
+                margin-bottom: 15px;
+            }
+        }
+
+        .socials {
+            position: static;
+            margin-left: auto;
+            margin-right: auto;
+            -webkit-transform: none;
+            -ms-transform: none;
+            -o-transform: none;
+            transform: none;
+            padding: 30px 0;
+
+            a {
+                height: 26px;
+            }
+        }
+    }
+
+    @media (max-width: 1000px) and (max-height: 800px) {
+        display: block;
     }
 }
+
+
 
 
 .languages {
@@ -442,6 +530,7 @@ canvas.active {
     background-size: cover;
     background-position: 0 0;
     position: fixed;
+    background-color: #231F20;
     top: 0;
     left: 0;
     right: 0;
@@ -452,6 +541,10 @@ canvas.active {
     -webkit-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+
+    @media (max-width: 1000px) {
+        background-image: none;
+    }
 }
 .menu-overlay.active {
     opacity: 1;

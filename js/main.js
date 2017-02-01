@@ -55,6 +55,7 @@ jQuery(document).ready(function($) {
     ---------------------------*/
     if ( $('#fullpage').length > 0 ) {
         $('#fullpage').fullpage({
+            lockAnchors: true,
             anchors:['main-page', 'second-page', 'third-page', 'home-textile', 'furniture', 'news'],
             scrollingSpeed: 1000,
 

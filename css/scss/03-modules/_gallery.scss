@@ -6,11 +6,17 @@
     @media (max-width: 1400px) {
         margin: 60px -2.8%;
     }
+    @media (max-width: 600px) {
+      margin: 20px -2.8%;
+    }
     @include flex($justify: space-around);
     a {
         margin: 2%;
         width: 21%;
         display: block;
+        @media (max-width: 600px) {
+          width: 45%;
+        }
         figure {
           position: absolute;
           left: 0;
@@ -34,6 +40,9 @@
               display: block;
               padding-bottom: 48.4%;
             }
+            @media (max-width: 600px) {
+              width: 100%;
+            }
         }
     }
 }
@@ -47,5 +56,16 @@
     }
     @media (max-width: 1400px) {
       margin: 40px -5%;
+    }
+    @media (max-width: 600px) {
+      img {
+        margin: 20px 5%;
+      }
+    }
+    @media (max-width: 600px) {
+      margin: 40px 0;
+      img {
+        max-width: 90%;
+      }
     }
 }

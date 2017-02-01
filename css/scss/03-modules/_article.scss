@@ -15,6 +15,10 @@ article {
         }
         @media (max-width: 1400px) {
             margin-bottom: 30px;
+            line-height: 1.8;
+        }
+        @media (max-width: 1000px) {
+            margin-bottom: 20px;
         }
     }
     @extend %clearfix;
@@ -42,6 +46,13 @@ article {
         -webkit-column-gap: 80px;
        -moz-column-gap: 80px;
             column-gap: 80px;
+    }
+    @media (max-width: 1000px) {
+        -webkit-column-count: 1; 
+    -moz-column-count: 1; 
+    column-count: 1;
+        padding-left: 0;
+        margin-bottom: 80px;
     }
 }
 article p {
@@ -84,7 +95,18 @@ article p {
     }
     @media (max-width: 1400px) {
         margin-left: 80px;
-        margin-bottom: 20px;
+    }
+    @media (max-width: 1200px) {
+        margin-left: 40px;
+    }
+    @media (max-width: 760px) {
+        width: 80%;
+        float: none;
+        display: block;
+        margin: 0 auto 80px;
+    }
+    @media (max-width: 500px) {
+        width: 100%;
     }
 }
 .animated .article-slider {

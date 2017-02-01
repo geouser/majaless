@@ -37,6 +37,7 @@
     }
     @media (max-width: 1400px) {
         height: 500px !important;
+        margin-bottom: 100px;
         .infoSide {
             padding-bottom: 200px;
         }
@@ -45,6 +46,10 @@
         height: auto !important;
         position: relative;
         z-index: 2;
+        margin-bottom: 80px;
+        .infoSide {
+            padding-bottom: 0px;
+        }
     }
 }
 .fullpage-section .illustrated-info {

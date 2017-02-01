@@ -35,6 +35,9 @@ body {
     background-size: cover;
     background-position: 0 0;
     background-attachment: fixed;
+    @media (max-width: 1000px) {
+        padding-top: 100px;
+    }
 }
 #canvas-bg {
     opacity: .4;
@@ -126,6 +129,27 @@ canvas {
 h3 {
     font: 60px $pfb;
     margin-bottom: 55px;
+    @media (max-width: 1200px) {
+        font-size: 52px;
+        margin-bottom: 40px;
+    }
+    @media (max-width: 1000px) {
+        font-size: 46px;
+        margin-bottom: 30px;
+    }
+    @media (max-width: 800px) {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    @media (max-width: 600px) {
+        font-size: 36px;
+    }
+    @media (max-width: 500px) {
+        font-size: 32px;
+    }
+    @media (max-width: 400px) {
+        font-size: 28px;
+    }
 }
 .animated .page-title {
     opacity: 1;
@@ -213,6 +237,14 @@ main {
   margin: auto;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
+  @media (max-width: 1000px) {
+      position: static;
+      -webkit-transform: none;
+         -moz-transform: none;
+          -ms-transform: none;
+           -o-transform: none;
+              transform: none;
+  }
 }
 
 

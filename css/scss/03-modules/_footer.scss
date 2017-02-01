@@ -12,6 +12,9 @@
     @media (max-width: 1400px) {
         margin-top: 80px;
     }
+    @media (max-width: 700px) {
+        margin-top: 40px;
+    }
     &__phone,
     &__address,
     &__email,
@@ -22,27 +25,59 @@
         color: #6c6c6c;
         text-transform: uppercase;
         font-family: $gm;
+        @media (max-width: 700px) {
+            text-align: center;
+            font-size: 10px;
+        }
     }
     &__phone,
     &__email {
         width: 200px;
+        @media (max-width: 1000px) {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+    &__address {
+        @media (max-width: 1000px) {
+            display: block;
+            margin: 10px auto;
+            br {
+                display: none;
+            }
+        }
     }
 
     &__phone {
         text-align: left;
+        @media (max-width: 1000px) {
+            text-align: center;
+        }
     }
 
     &__email {
         text-align: right;
+        @media (max-width: 1000px) {
+            text-align: center;
+        }
+    }
+    .wrapper--flex {
+        @media (max-width: 1000px) {
+            display: block;
+        }
     }
 }
 
-.fp-viewing-news .footer {
-    opacity: 1;
-    visibility: visible;
-    bottom: 7.5%;
-    z-index: 2;
-}
+
+    .fp-viewing-news .footer {
+        opacity: 1;
+        visibility: visible;
+        bottom: 7.5%;
+        z-index: 2;
+    }    
+
+@media (min-width: 1000px) {
 
 .fp .footer {
     margin-top: 0;
@@ -54,14 +89,15 @@
     bottom: 30px;
 }
 
-.fullpage + .footer {
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transform: translateY(50%);
-    -ms-transform: translateY(50%);
-    -o-transform: translateY(50%);
-    transform: translateY(50%);
-    bottom: -30px;
+    .fullpage + .footer {
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transform: translateY(50%);
+        -ms-transform: translateY(50%);
+        -o-transform: translateY(50%);
+        transform: translateY(50%);
+        bottom: -30px;
+    }
 }
 
 

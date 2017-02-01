@@ -9,6 +9,13 @@
     @media (max-width: 1400px) {
         margin-top: 80px;
     }
+    @media (max-width: 1000px) {
+        margin-bottom: 0;
+        margin-top: 60px;
+    }
+     @media (max-width: 600px) {
+         margin-top: 40px;
+     }
 }
 
 .collections-item {
@@ -24,6 +31,14 @@
     -moz-transform-style: preserve-3d;
     -ms-transform-style: preserve-3d;
     transform-style: preserve-3d;
+    @media (max-width: 1000px) {
+        width: 48%;
+        margin-bottom: 4%;
+    }
+    @media (max-width: 600px) {
+        width: 100%;
+        margin-bottom: 20px;
+    }
     &:before {
           content: "";
           display: block;
@@ -62,6 +77,12 @@
       content: "";
       display: block;
       padding-bottom: 70%;
+      @media (max-width: 1000px) {
+          padding-bottom: 80%;
+      }
+      @media (max-width: 600px) {
+          padding-bottom: 90%;
+      }
     }
     span {
         position: absolute;
@@ -103,17 +124,34 @@
     margin: 0 -3%;
     -webkit-justify-content: center;
             justify-content: center;
+    @media (max-width: 500px) {
+        margin: 0;
+    }
     .collections-item {
         width: 28%;
         margin: 2.5%;
         &:after {
             padding-bottom: 100%;
         }
+        @media (max-width: 1000px) {
+            width: 30%;
+            margin: 1%;
+        }
+        @media (max-width: 760px) {
+            width: 45%;
+        }
+        @media (max-width: 500px) {
+            width: 100%;
+            margin: 0 auto 20px;
+        }
     }
 }
 
 .filters {
     margin-top: 50px;
+    @media (max-width: 500px) {
+        margin-top: 30px;
+    }
     .filter {
         background-color: transparent;
         font: 18px/33px $gb;
@@ -129,6 +167,11 @@
             background-color: #F5D679;
             color: #231f20;
         }
+        @media (max-width: 1000px) {
+            font-size: 14px;
+            line-height: 30px;
+            margin: 4px 0;
+        }
     }
     &:before {
         content: "";
@@ -138,6 +181,9 @@
         width: 40px;
         background-color: #F5D679;
         margin-right: 10px;
+        @media (max-width: 1000px) {
+            display: none;
+        }
     }
     &:after {
         content: "";
@@ -147,6 +193,9 @@
         width: 40px;
         background-color: #F5D679;
         margin-left: 10px;
+        @media (max-width: 1000px) {
+            display: none;
+        }
     }
 }
 #collections .mix {
@@ -159,25 +208,51 @@
 #collections {
     margin-top: 25px;
     .collections-item {
-        width: 28%;
-        margin: 2.5%;
     }
 }
 
 .wallpapers {
     margin-top: 140px;
+    @media (max-width: 1000px) {
+        margin-top: 100px;
+    }
+    @media (max-width: 800px) {
+        margin-top: 80px;
+    }
+    @media (max-width: 600px) {
+        margin-top: 40px;
+    }
 }
 
 .wallpaper {
     @include flex();
     margin-bottom: 140px;
+    @media (max-width: 1000px) {
+        display: block;
+        margin-bottom: 100px;
+    }
+    @media (max-width: 800px) {
+        margin-bottom: 80px;
+    }
+    @media (max-width: 600px) {
+        margin-bottom: 60px;
+    }
     &__info {
         width: 52%;
         padding-right: 4%;
         text-align: left;
+        @media (max-width: 1000px) {
+            width: 100%;
+            padding-right: 0;
+        }
     }
     &__img {
         width: 48%;
+        @media (max-width: 1000px) {
+            width: 100%;
+            margin-top: 30px;
+            display: block;
+        }
         img,
         figure {
             width: 100%;
@@ -188,9 +263,17 @@
         .wallpaper__info {
             padding-right: 0;
             padding-left: 4%;
+            @media (max-width: 1000px) {
+                padding-left: 0;
+            }
         }
         -webkit-flex-direction: row-reverse;
             -ms-flex-direction: row-reverse;
                 flex-direction: row-reverse;
+        @media (max-width: 1000px) {
+            -webkit-flex-direction: row;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+        }
     }
 }

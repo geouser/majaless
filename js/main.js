@@ -46,7 +46,7 @@ jQuery(document).ready(function($) {
             //Custom selectors
             sectionSelector: '.fullpage-section',
             slideSelector: '.fullpage-slide',
-
+            responsiveWidth: 1000,
             //events
             onLeave: function(index, nextIndex, direction){
             },

@@ -20,6 +20,9 @@
             display: block;
             width: 100%;
         }
+        @media (max-width: 800px) {
+            width: 90px;
+        }
     }
     &.hasScrolled {
         background-color: #231f20;

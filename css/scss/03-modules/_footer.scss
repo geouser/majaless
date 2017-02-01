@@ -63,3 +63,37 @@
     transform: translateY(50%);
     bottom: -30px;
 }
+
+
+.socials {
+    position: fixed;
+    bottom: 7.5%;
+    left: 4%;
+    z-index: 11;
+    -webkit-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    -o-transform: translateY(50%);
+    transform: translateY(50%);
+
+    a {
+        display: inline-block;
+        vertical-align: middle;
+        height: 18px;
+        cursor: pointer;
+        margin-right: 12px;
+        
+        svg {
+            height: 100%;
+        }
+        path {
+            fill: #fff;
+            -webkit-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+
+        &:hover path {
+            fill: $gold;
+        }
+    }
+}

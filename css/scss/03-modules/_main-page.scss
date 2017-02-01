@@ -299,9 +299,9 @@
         -ms-transform: translateX(50px);
         -o-transform: translateX(50px);
         transform: translateX(50px);
-        -webkit-transition: all 1s ease;
-        -o-transition: all 1s ease;
-        transition: all 1s ease;
+        -webkit-transition: opacity 1s ease;
+        -o-transition: opacity 1s ease;
+        transition: opacity 1s ease;
         opacity: 0;
         visibility: hidden;
 

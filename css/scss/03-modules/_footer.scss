@@ -33,30 +33,38 @@
     &__phone,
     &__email {
         width: 200px;
-        @media (max-width: 700px) {
+        @media (max-width: 1000px) {
             display: block;
             margin: 0 auto;
             text-align: center;
         }
     }
     &__address {
-        @media (max-width: 700px) {
+        @media (max-width: 1000px) {
             display: block;
             margin: 10px auto;
+            br {
+                display: none;
+            }
         }
     }
 
     &__phone {
         text-align: left;
-        @media (max-width: 700px) {
+        @media (max-width: 1000px) {
             text-align: center;
         }
     }
 
     &__email {
         text-align: right;
-        @media (max-width: 700px) {
+        @media (max-width: 1000px) {
             text-align: center;
+        }
+    }
+    .wrapper--flex {
+        @media (max-width: 1000px) {
+            display: block;
         }
     }
 }

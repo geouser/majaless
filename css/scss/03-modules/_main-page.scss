@@ -98,6 +98,9 @@
         -ms-transform: translate(-50%, -50%);
         -o-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
+        @media (max-width: 600px) {
+            width: 87%;
+        }
     }
 
     .scroll-down {
@@ -249,12 +252,23 @@
 }
 @media (max-width: 360px) {
     .main-screen .fp-tableCell {
-        padding: 140px 0;
+        padding: 150px 0;
+    }
+    .fp-tableCell {
+        padding: 40px 0;
     }
 }
 @media (max-width: 500px) {
     .main-screen {
         margin-top: 60px;
+    }
+}
+@media (max-height: 500px) {
+    .main-screen {
+        margin-top: 50px;
+    }
+    .main-screen .fp-tableCell {
+        padding: 120px 0;
     }
 }
 
@@ -701,7 +715,9 @@
     background-color: transparent;
     padding: 0;
     cursor: pointer;
-
+    @media (max-width: 1000px) {
+        bottom: 3.5%;
+    }
     span {
         height: 10px;
         width: 100%;

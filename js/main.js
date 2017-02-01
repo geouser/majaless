@@ -116,7 +116,7 @@ jQuery(document).ready(function($) {
                                 ACTIVATE MENU ITEM OVER CURRENT SECTION
     ---------------------------*/
     var $sections = $('section');
-    var windowHalf = $(window).height() / 2;
+    var windowHalf = $(window).height() / 1.5;
 
     $sections.each(function(){
       if ($(this).offset().top < windowHalf) {
@@ -214,6 +214,16 @@ jQuery(document).ready(function($) {
         arrows: false,
         dots: true
     });
+
+    $('.gallery').each(function() { // the containers for all your galleries
+      $(this).magnificPopup({
+          delegate: 'a', // the selector for gallery item
+          type: 'image',
+          gallery: {
+            enabled:true
+          }
+      });
+  });
 
 
 

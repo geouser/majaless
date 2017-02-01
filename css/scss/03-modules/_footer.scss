@@ -105,6 +105,11 @@
     }
 }
 
+    @media (max-width: 1000px) {
+        .fp .footer {
+            margin-bottom: 40px;
+        }
+    }
 
 .socials {
     position: fixed;
@@ -115,7 +120,6 @@
     -ms-transform: translateY(50%);
     -o-transform: translateY(50%);
     transform: translateY(50%);
-
     @media (max-width: 1000px) {
         bottom: 20px;
     }

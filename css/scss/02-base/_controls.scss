@@ -32,6 +32,13 @@
         line-height: 36px;
         font-size: 11px;
     }
+    @media (max-width: 600px) {
+        .button {
+            height: 35px;
+            line-height: 32px;
+            font-size: 10px;
+        }
+    }
     &--white {
         border-color: #fff;
         color: #fff;

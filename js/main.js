@@ -109,7 +109,7 @@ jQuery(document).ready(function($) {
                                 ACTIVATE MENU ITEM OVER CURRENT SECTION
     ---------------------------*/
     var $sections = $('section');
-    var windowHalf = $(window).height() / 2;
+    var windowHalf = $(window).height() / 1.5;
 
     $sections.each(function(){
       if ($(this).offset().top < windowHalf) {
